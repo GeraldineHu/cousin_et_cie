@@ -15,32 +15,41 @@
         <video class="videoBackground" id="video1" autoplay muted poster="./img/background_poster.jpg">
             <source src="./img/background_video.mp4" type="video/mp4">
         </video>
-        <nav class="flexContainer">
-            <ul>
+        <nav id="main-nav-desktop" class="flexContainer">
+            <ul class="main-list-nav-desktop">
                 <li><a href="">À propos</a></li>
                 <li><a href="">Les dégustations</a></li>
             </ul>
             <p class="textLogo">Cousin & Cie</p>
-            <ul>
+            <ul class="main-list-nav-desktop">
                 <li><a href="">La boutique</a></li>
                 <li><a href="">Les actualités</a></li>
             </ul>
+            <input type="checkbox" id="hamburger-input" class="burger-shower" />
+            <label id="hamburger-menu" for="hamburger-input">
+                    <ul id="hamburger-nav">
+                        <li><a href="">À propos</a></li>
+                        <li><a href="">Les dégustations</a></li>
+                        <li><a href="">La boutique</a></li>
+                        <li><a href="">Les actualités</a></li>
+                    </ul>
+            </label>
         </nav>
         <div class="flexContainer flexColumn headerTitle">
             <h1>Cousin & Compagnie</h1>
             <h2>Caviste au naturel, depuis 1993</h2>
-            <div class="btn">
+            <div class="btn btn__scale btn__color--black">
                 <a href="">La boutique en ligne</a>
             </div>
         </div>    
     </header>
-    <section class="flexContainer flexColumn">
-        <div class="flexContainer flexColumn centerItems title">
+    <section class="flexContainer flexColumn" id="section-degustation">
+        <div class="flexContainer centerItems title">
         <h2>Les dégustations</h2>
         <h3>Un moment unique, une expérience inoubliable.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <div class="flexContainer flexGap" id="flexFigure">
+        <div class="flexContainer flex-figure" id="figure-degustation">
             <figure>
                 <img src="./img/vignette_accueil03.jpg" alt="">
                 <figcaption class="centerItems">Lorem ipsum</figcaption>
@@ -54,16 +63,16 @@
                 <figcaption class="centerItems">Lorem ipsum</figcaption>
             </figure>
         </div>
-        <div class="btn">
+        <div class="btn btn__scale btn__color--black">
             <a href="">Les ateliers dégustations</a>
         </div>
     </section>
-    <section class="flexContainer" id="sectionBox">
-        <div class="flexContainer flexColumn title">
+    <section class="flexContainer" id="section-box">
+        <div class="flexContainer title">
             <h2>La box</h2>
             <h3>Le coffret des délices.</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero excepturi illum mollitia tempora magnam est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui optio, minus architecto placeat rem.</p>
-            <div class="btn"><a href="">La box mets & vins</a></div>
+            <div class="btn btn__scale btn__color--green"><a href="">La box mets & vins</a></div>
         </div>
         <div class="gridContainer">
             <div class="bloc01">
@@ -78,7 +87,7 @@
         </div>
     </section>
     <section class="flexContainer flexColumn" id="sectionActu">
-        <div class="flexContainer flexColumn centerItems title">
+        <div class="flexContainer centerItems title">
             <h2>Le Blog</h2>
             <h3>Toutes les actualités œnologiques.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -178,21 +187,21 @@
                 </ul>
             </div>
             <div>
-                <ul>
+                <ul class="flexContainer">
                     <li><a href="">Mon compte</a></li>
                     <li><a href="">Livraisons</a></li>
                     <li><a href="">Paiement sécurisé</a></li>
                 </ul>
             </div>
             <div>
-                <ul>
+                <ul class="flexContainer">
                     <li><a href="">Nous contacter</a></li>
                     <li><a href="">À propos</a></li>
-                    <li><a href="">Acutualités</a></li>
+                    <li><a href="">Actualités</a></li>
                 </ul>
             </div>
             <div>
-                <ul>
+                <ul class="flexContainer">
                     <li><a href="">Le magasin</a></li>
                     <li><a href="">Boutique en ligne</a></li>
                     <li><a href="">Ateliers dégustations</a></li>
