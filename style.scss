@@ -80,21 +80,30 @@ h3 {
     font-size: 2.8rem;
 }
 
-h1, h2, h3, h4, ul, figure, p {
+h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, ul, figure, p, span {
     margin: 0;
+    padding: 0;
     padding-inline-start: 0;
 }
 
-p, a, figcaption, li, input, h4, ::after {
+p, a, figcaption, li, input, h4, ::after, span {
     font-family: 'roboto';
     color: $dark-color;
     text-decoration: none;
     line-height: 1.6;
 }
 
+ul {
+    list-style: none;
+}
+
 section {
     height: auto;
-    align-items: center;
     padding: 5% 10%;
     column-gap: 70px;
     row-gap: 40px;
@@ -158,8 +167,6 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     ul {
-        list-style: none;
-        padding: 0;
         text-transform: uppercase;
         justify-content: space-evenly;
         }
@@ -228,8 +235,6 @@ nav {
     #main-nav-desktop  .main-list-nav-desktop {
       display: flex;
       flex: 1;
-      list-style: none;
-      padding: 0;
       text-transform: uppercase;
     }
     #hamburger-input, #hamburger-menu {
@@ -254,7 +259,7 @@ nav {
 
 #eshop__nav--secondary {
     background-color: $background-color;
-    height: auto;
+    height: 8vh;
     border-block: 1px solid $dark-color;
     box-shadow: 0 5px 6px rgba(19,18,19,0.2);
     
@@ -319,27 +324,25 @@ nav {
 
 
 /*************** HEADER ***************/
-
-header {
+#header__main {
+    position: relative;
     height: 100vh;
     background: url('./img/background_poster.jpg');
     background-size: cover;
     transition: all 600ms ease-in;
-}
-
-header::after {
-    content: "";
-    background-color: rgba(19,18,19,0.4);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 400ms ease-in-out;
-}
-
-header:hover::after {
-    background-color: rgba(19,18,19,0.1);
+    &::after {
+        content: "";
+        background-color: rgba(19,18,19,0.4);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 400ms ease-in-out;
+    }
+    &:hover::after {
+        background-color: rgba(19,18,19,0.1);
+    }
 }
 
 .videoBackground {
@@ -411,20 +414,13 @@ header:hover::after {
 
 /*************** HEADER ESHOP ***************/
 
-#header_eshop {
-    background: url('./img/header_eshop1.jpg') no-repeat 0 65%;
-    background-size: cover;
-    background-attachment: fixed;
-    p {
-        color: #fff;
-        text-shadow: 1px 1px $dark-color;
-    }
-}
+
 
 
 /************* SECTION ATELIERS *************/
 #section-degustation{
     height: 100vh;
+    align-items: center;
 }
 
 .flex-figure { 
@@ -481,6 +477,7 @@ header:hover::after {
 #section-box {
     flex-direction: column-reverse;
     height: 100vh;
+    align-items: center;
 }
 
 #section-box .title {
@@ -690,7 +687,7 @@ form {
     display: flex;
 }
 
-input, .submitButton {
+#input__newsletter, .submit__newsletter {
     height: 40px;
     border: none;
     background-color: transparent;
@@ -702,7 +699,7 @@ input[type="email"] {
     padding: 0 25px;
 }
 
-.submitButton {
+.submit__newsletter {
     width: 15%;
     svg {
         height: 30px;
@@ -723,10 +720,6 @@ footer {
     color: #fff;
     padding: 5% 10%;
     row-gap: 40px;
-    ul {
-        list-style: none;
-        padding: 0;
-    }
     ul li, a {
         color: #fff;
     }
@@ -808,24 +801,40 @@ footer li ul {
 
 
 
+/*************** ESHOP SECTION SLIDE ***************/
+
+#slide-section {
+    background: url('./img/header_eshop1.jpg') no-repeat 0 65%;
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(100vh - (12vh + 8vh));
+    h3 {
+        font-size: 4.2rem;
+    }
+    h3, p {
+        color: #fff;
+        text-shadow: 1px 1px $dark-color;
+    }
+}
+
+
 
 /************* ESHOP SECTION SELECTION *************/
 
 #section-selection {
     height: 100vh;
     ul {
-        list-style: none;
         text-align: center;
         gap: 5px;
     }
 }
 
-#product__container {
+#selection__container {
     width: 100%;
     justify-content: space-evenly;
 }
 
-.product__img {
+.selection__img {
     height: 45vh;
     overflow: hidden;
     position: relative;
@@ -840,7 +849,7 @@ footer li ul {
     }
 }
 
-.product__img::after {
+.selection__img::after {
     content: attr(data-vin);
     position: absolute;
     top: 0;
@@ -852,15 +861,15 @@ footer li ul {
     padding: 0 2px;
 }
 
-.product__description {
+.selection__description {
     gap: 10px;
-    .product__description--name, .product__description--price {
+    .selection__description--name, .selection__description--price {
         font-weight: 500;
     }
-    .product__description--price {
+    .selection__description--price {
         font-size: 1.8rem;
     }
-    .product__description--origin {
+    .selection__description--origin {
         font-size: 1.4rem;
     }    
 }
@@ -900,9 +909,6 @@ footer li ul {
 .avantages__description {
     align-items: center;
     gap: 50px;
-    h4 {
-        text-transform: uppercase;
-    }
     .avantages__text {
         flex: 1;
     }
@@ -913,3 +919,123 @@ footer li ul {
 
 
 
+/************* PAGE PRODUIT SECTION PRODUCT *************/
+
+#product-section {
+    height: calc(100vh - (12vh + 8vh));
+}
+
+.breadcrumb {
+    gap: 10px;
+    li {
+        font-size: 1.4rem;
+    }
+    li:last-of-type a {
+        color: $tertiary-color;
+    }
+}
+
+#product__container {
+    gap: 50px;
+    h1, .product__year, .product__price--price  {
+        @include nimbusLight;
+        font-size: 4.8rem;
+        letter-spacing: 0;
+        line-height: 1;
+    }
+}
+
+#product__img {
+    flex: 1;
+    overflow: hidden;
+    img {
+        transition: all 300ms linear;
+    }
+    &:hover img {
+        transform: scale(3);
+    }
+}
+
+#product__description {
+    flex: 2;
+    gap: 20px;
+}
+
+#product__action {
+    flex: 1;
+    gap: 20px;
+    align-items: center;
+    .product__price--type {
+        font-size: 1.4rem;
+    }
+}
+
+.product_label {
+    gap: 15px;
+    span {
+        background-color: $dark-color;
+        color: #fff;
+        width: max-content;
+        padding: 5px;
+    }
+}
+
+
+#product__submit {
+    width: auto;
+    #product__quantity {
+        border: 1px solid $dark-color;
+        display: block;
+        width: 100%;
+        height: 8vh;
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+    #product__quantity:focus {
+        outline: none;
+    }
+    input[type="submit"] {
+        border: none;
+        outline: none;
+        padding: 15px 25px;
+        color: #fff;
+        text-transform: uppercase;
+        @include manropeLight;
+        letter-spacing: 1px;
+        font-size: 1.6rem;
+    }
+    input[type="submit"]:focus {
+        background-color: $secondary-color;
+    }
+}
+
+
+/************* PAGE PRODUIT SECTION DEGUSTATION *************/
+
+
+#section-accords {
+    gap: 60px;
+    h4 {
+        color: #fff;
+    }
+    figure {
+        gap: 20px;
+    }
+    figcaption, h4 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    p {
+        font-weight: 300;
+    }
+}
+
+.detail__container {
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/************* PAGE PRODUIT SECTION CARACTERISTIQUE *************/

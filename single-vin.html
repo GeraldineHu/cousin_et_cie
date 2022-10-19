@@ -8,7 +8,7 @@
     <title>Page vin</title>
 </head>
 <body>
-    <header id="header_eshop" class="flexContainer flexColumn">
+    <header id="header__eshop" class="flexContainer flexColumn">
         <nav id="eshop__nav" class="flexContainer">
             <ul class="eshop-list-nav-desktop flexContainer">
                 <li><a href="">Lol1</a></li>
@@ -66,13 +66,139 @@
                 <li class="eshop__list"><a href="">Box Vins & Mets</a></li>
             </ul>
         </nav>
-        <div class="flexContainer flexColumn headerTitle centerItems">
-            <h1>Cousin & Compagnie</h1>
-            <p>Une selection de vins frais et légers à déguster pendant vos vacances.</p>
-            <div class="btn btn__color--black btn__scale">
-                <a href="">Tous nos vins rosés</a>
-            </div>
-        </div>    
     </header>
+    <section class="flexContainer flexColumn" id="product-section">
+        <ul class="breadcrumb flexContainer">
+            <li><a href="">Catégorie vins/</a></li>
+            <li><a href="">Sous-catégorie/</a></li>
+            <li><a href="">Page</a></li>
+        </ul>
+        <div class="flexContainer" id="product__container">
+            <div id="product__img">
+                <img src="./img/vin_selection3.jpg" alt="">
+            </div>
+            <div id="product__description" class="flexContainer flexColumn">
+                <div>
+                    <h1>Château de Pibarnon</h1>
+                    <span class="product__year">2021</span>
+                </div>
+                <h4>Bandol Provence</h4>
+                <div class="product_label flexContainer">
+                    <span>Agriculture biologique</span><span>Nature & Progrès</span>
+                </div>
+                <p>Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div id="product__action" class="flexContainer flexColumn">
+                <ul class="product__price">
+                    <li class="product__price--price">17,50 €</li>
+                    <li class="product__price--type">La bouteille de 75cl</li>
+                </ul>
+                <div id="product__submit">
+                    <input type="number" id="product__quantity" value="1" min="1" max="24">
+                    <input type="submit" class="btn btn__color--black" value="Ajouter au panier">
+                </div>
+                <ul class="product__availability">
+                    <li>En stock</li>
+                    <li>Disponible en magasin</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="flexContainer flexColumn section-dark" id="section-accords">
+        <div class="flexContainer title centerItems">
+            <h3>Dégustation & accords</h3>
+        </div>
+        <div class="flexContainer detail__container">
+            <div>
+                <h4>L'avis du sommelier</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, commodi.</p>
+            </div>
+            <div>
+                <h4>Goût</h4>
+                <p>Floral, fruité</p>
+            </div>
+            <div>
+                <h4>T° de service</h4>
+                <p>17°C</p>
+            </div>
+            <figure class="flexContainer">
+                <img src="./img/icon-star.svg" alt="">
+                <div>
+                    <figcaption>Accord Parfait</figcaption>
+                    <p>Moussaka</p>
+                </div>
+            </figure>
+        </div>
+        <div class="flexContainer detail__container">
+            <figure class="flexContainer">
+                <img src="./img/icon-sandwich.svg" alt="">
+                <div>
+                    <figcaption>Apéritif</figcaption>
+                    <p>Petits fours</p>
+                </div>
+            </figure>
+            <figure class="flexContainer">
+                <img src="./img/icon-viande.svg" alt="">
+                <div>
+                    <figcaption>Viandes</figcaption>
+                    <p>Grillades</p>
+                </div>
+            </figure>
+            <figure class="flexContainer">
+                <img src="./img/icon-gateau.svg" alt="">
+                <div>
+                    <figcaption>Gâteaux</figcaption>
+                    <p>Tartes aux fruits</p>
+                </div>
+            </figure>
+            <figure class="flexContainer">
+                <img src="./img/icon-carotte.svg" alt="">
+                <div>
+                    <figcaption>Légumes</figcaption>
+                    <p>Légumes d'été grillés</p>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <section class="flexContainer flexColumn" id="section-caracteristiques">
+        <div class="flexContainer title centerItems">
+            <h3>Caractéristiques</h3>
+        </div>
+        <div class="flexContainer detail__container">
+            <div>
+                <h4>Couleur</h4>
+                <p>Rosé</p>
+            </div>
+            <div>
+                <h4>Millésime</h4>
+                <p>2021</p>
+            </div>
+            <div>
+                <h4>Région</h4>
+                <p>Provence</p>
+            </div>
+            <div>
+                <h4>Cépages</h4>
+                <p>Syrah, pinot blanc</p>
+            </div>
+            <div>
+                <h4>Culture</h4>
+                <p>Agriculture biologique</p>
+            </div>
+            <div>
+                <h4>Appellation</h4>
+                <p>AOC Bandol</p>
+            </div>
+        </div>
+    </section>
+    <section class="flexContainer" id="section-domaine">
+        <div><img src="" alt=""></div>
+        <div class="flexContainer title">
+            <h2>La box</h2>
+            <h3>Le coffret des délices.</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero excepturi illum mollitia tempora magnam est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui optio, minus architecto placeat rem.</p>
+            <button class="btn btn__scale btn__color--green"><a href="">La box mets & vins</a></button>
+        </div>
+    </section>
 </body>
 </html>

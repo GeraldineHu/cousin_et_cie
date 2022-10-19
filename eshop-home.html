@@ -8,7 +8,7 @@
     <title>La boutique</title>
 </head>
 <body>
-    <header id="header_eshop" class="flexContainer flexColumn">
+    <header id="header__eshop" class="flexContainer flexColumn">
         <nav id="eshop__nav" class="flexContainer">
             <ul class="eshop-list-nav-desktop flexContainer">
                 <li><a href="">Lol1</a></li>
@@ -66,54 +66,56 @@
                 <li class="eshop__list"><a href="">Box Vins & Mets</a></li>
             </ul>
         </nav>
-        <div class="flexContainer flexColumn headerTitle centerItems">
-            <h1>Cousin & Compagnie</h1>
+    </header>
+    <section class="flexContainer" id="slide-section">
+        <div class="flexContainer flexColumn title centerItems">
+            <h3>Un été fruité.</h1>
             <p>Une selection de vins frais et légers à déguster pendant vos vacances.</p>
             <div class="btn btn__color--black btn__scale">
                 <a href="">Tous nos vins rosés</a>
             </div>
         </div>    
-    </header>
+    </section>
     <section class="flexContainer flexColumn" id="section-selection">
         <div class="flexContainer title centerItems" id="figure-selection">
             <h2>Nos coups de cœur</h2>
             <h3>La sélection estivale du sommelier.</h3>
         </div>
-        <div class="flexContainer"  id="product__container">
-            <div class="flexContainer flexColumn centerItems product__description">
-                <div class="product__img" data-vin="AB">
+        <div class="flexContainer"  id="selection__container">
+            <div class="flexContainer flexColumn centerItems selection__description">
+                <div class="selection__img" data-vin="AB">
                     <a href=""><img src="./img/vin_selection1.jpg" alt=""></a>
                 </div>
                 <ul class="flexContainer flexColumn">
-                    <li class="product__description--name">Les Forêts, 2019</li>
-                    <li class="product__description--origin">Chablis Premier Cru</li>
-                    <li class="product__description--price">26,50€</li>
+                    <li class="selection__description--name">Les Forêts, 2019</li>
+                    <li class="selection__description--origin">Chablis Premier Cru</li>
+                    <li class="selection__description--price">26,50€</li>
                 </ul>
                 <div class="btn btn__color--black">
                     <a href="">Ajouter au panier</a>
                 </div>
             </div>
-            <div class="flexContainer flexColumn centerItems product__description">
-                <div class="product__img" data-vin="Demeter">
+            <div class="flexContainer flexColumn centerItems selection__description">
+                <div class="selection__img" data-vin="Demeter">
                     <a href=""><img src="./img/vin_selection2.jpg" alt=""></a>
                 </div>
                 <ul class="flexContainer flexColumn">
-                    <li class="product__description--name">Château de la Mascaronne, 2020</li>
-                    <li class="product__description--origin">Chablis Premier Cru</li>
-                    <li class="product__description--price">26,50€</li>
+                    <li class="selection__description--name">Château de la Mascaronne, 2020</li>
+                    <li class="selection__description--origin">Chablis Premier Cru</li>
+                    <li class="selection__description--price">26,50€</li>
                 </ul>
                 <div class="btn btn__color--black">
                     <a href="">Ajouter au panier</a>
                 </div>
             </div>
-            <div class="flexContainer flexColumn centerItems product__description">
-                <div class="product__img" data-vin="N&P">
+            <div class="flexContainer flexColumn centerItems selection__description">
+                <div class="selection__img" data-vin="N&P">
                     <a href=""><img src="./img/vin_selection3.jpg" alt=""></a>
                 </div>
                 <ul class="flexContainer flexColumn">
-                    <li class="product__description--name">Château de Pibarnon, 2020</li>
-                    <li class="product__description--origin">Chablis Premier Cru</li>
-                    <li class="product__description--price">26,50€</li>
+                    <li class="selection__description--name">Château de Pibarnon, 2020</li>
+                    <li class="selection__description--origin">Chablis Premier Cru</li>
+                    <li class="selection__description--price">26,50€</li>
                 </ul>
                 <div class="btn btn__color--black">
                     <a href="">Ajouter au panier</a>
@@ -131,7 +133,6 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officiis aliquam perferendis, ipsum fugit quaerat nemo quos quidem culpa facilis error autem quae quis ut incidunt ea. Placeat, corporis iure. Similique ipsum eius necessitatibus ab a quaerat fugiat blanditiis. Cumque.</p>
                     <button class="btn btn__scale btn__color--green"><a href="">La box mets & vins</a></button>
                 </div>
-                
             <div class="box__img"><img src="./img/box_chef_cuisinier.jpg" alt=""></div>
         </div>
     </section>
@@ -173,5 +174,6 @@
             </div>
         </div>
     </section>
+    <script src="eshop.js"></script>
 </body>
 </html>
