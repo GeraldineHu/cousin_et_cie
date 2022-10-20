@@ -102,7 +102,7 @@ h3 {
     font-size: 2.8rem;
 }
 
-h4 {
+h4, .filter__title {
     @include robotoMedium;
     text-transform: uppercase;
     font-weight: 500;
@@ -847,6 +847,7 @@ footer li ul {
 
 #section-selection {
     height: 100vh;
+    align-items: center;
     ul {
         text-align: center;
         gap: 5px;
@@ -858,7 +859,7 @@ footer li ul {
     justify-content: space-evenly;
 }
 
-.selection__img {
+.card__img {
     height: 45vh;
     overflow: hidden;
     position: relative;
@@ -873,7 +874,7 @@ footer li ul {
     }
 }
 
-.selection__img::after {
+.card__img::after {
     content: attr(data-vin);
     position: absolute;
     top: 0;
@@ -885,15 +886,15 @@ footer li ul {
     padding: 0 2px;
 }
 
-.selection__description {
+.product__card {
     gap: 10px;
-    .selection__description--name, .selection__description--price {
+    .product__card--name, .product__card--price {
         font-weight: 500;
     }
-    .selection__description--price {
+    .product__card--price {
         font-size: 1.8rem;
     }
-    .selection__description--origin {
+    .product__card--origin {
         font-size: 1.4rem;
     }    
 }
@@ -1066,4 +1067,22 @@ footer li ul {
 #domaine__detail, #domaine__img {
     flex: 1;
     justify-content: center;
+}
+
+
+/************* PAGE ARCHIVE FILTRE *************/
+
+#archive-filter {
+    flex: 0 0 25%;
+    border-right: 1px solid $dark-color;
+    padding-left: 50px;
+}
+
+.filter__li {
+    gap: 10px;
+}
+
+.filter__type {
+    gap: 15px;
+    padding: 25px 0;
 }

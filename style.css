@@ -61,7 +61,7 @@ h3 {
   font-size: 2.8rem;
 }
 
-h4 {
+h4, .filter__title {
   font-family: "Roboto Flex", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
@@ -757,6 +757,7 @@ footer li ul {
 /************* ESHOP SECTION SELECTION *************/
 #section-selection {
   height: 100vh;
+  align-items: center;
 }
 #section-selection ul {
   text-align: center;
@@ -768,22 +769,22 @@ footer li ul {
   justify-content: space-evenly;
 }
 
-.selection__img {
+.card__img {
   height: 45vh;
   overflow: hidden;
   position: relative;
 }
-.selection__img img {
+.card__img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: all 300ms ease-in-out;
 }
-.selection__img img:hover {
+.card__img img:hover {
   transform: scale(1.2);
 }
 
-.selection__img::after {
+.card__img::after {
   content: attr(data-vin);
   position: absolute;
   top: 0;
@@ -795,16 +796,16 @@ footer li ul {
   padding: 0 2px;
 }
 
-.selection__description {
+.product__card {
   gap: 10px;
 }
-.selection__description .selection__description--name, .selection__description .selection__description--price {
+.product__card .product__card--name, .product__card .product__card--price {
   font-weight: 500;
 }
-.selection__description .selection__description--price {
+.product__card .product__card--price {
   font-size: 1.8rem;
 }
-.selection__description .selection__description--origin {
+.product__card .product__card--origin {
   font-size: 1.4rem;
 }
 
@@ -963,6 +964,22 @@ footer li ul {
 #domaine__detail, #domaine__img {
   flex: 1;
   justify-content: center;
+}
+
+/************* PAGE ARCHIVE FILTRE *************/
+#archive-filter {
+  flex: 0 0 25%;
+  border-right: 1px solid #131213;
+  padding-left: 50px;
+}
+
+.filter__li {
+  gap: 10px;
+}
+
+.filter__type {
+  gap: 15px;
+  padding: 25px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
