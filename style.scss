@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500&display=swap');
+
 @font-face {
-    font-family: "Nimbus Roman no9";
+    font-family: "Nimbus Roman no9 Regular";
     src: url("./fonts/nimbus/nimbusromno9l-reg-webfont.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Nimbus Roman no9 Bold";
+    src: url("./fonts/nimbus/nimbusromno9l-med-webfont.woff2") format("woff2");
   }
 
 @font-face {
@@ -16,7 +23,12 @@
 
 
 @mixin nimbusLight {
-    font-family: 'Nimbus Roman no9';
+    font-family: 'Nimbus Roman no9 Regular';
+    font-weight: 300;
+}
+
+@mixin nimbusBold {
+    font-family: 'Nimbus Roman no9 Bold';
     font-weight: 300;
 }
 
@@ -29,6 +41,16 @@
 @mixin manropeRegular {
     font-family: 'Manrope Medium';
     text-transform: uppercase;
+}
+
+@mixin robotoRegular {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+}
+
+@mixin robotoMedium {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 500;
 }
 
 $primary-color: #FFFDF5;
@@ -76,13 +98,15 @@ h2 {
 }
 
 h3 {
-    @include nimbusLight;
+    @include nimbusBold;
     font-size: 2.8rem;
 }
 
 h4 {
+    @include robotoMedium;
     text-transform: uppercase;
     font-weight: 500;
+    color: $dark-color;
 }
 
 h1, h2, h3, h4, ul, figure, p, span {
@@ -91,8 +115,8 @@ h1, h2, h3, h4, ul, figure, p, span {
     padding-inline-start: 0;
 }
 
-p, a, figcaption, li, input, h4, ::after, span {
-    font-family: 'roboto';
+p, a, figcaption, li, input, ::after, span {
+    @include robotoRegular;
     color: $dark-color;
     text-decoration: none;
     line-height: 1.6;
@@ -171,7 +195,7 @@ nav {
         justify-content: space-evenly;
         }
     a {
-        @include manropeRegular;
+        @include robotoMedium;
         letter-spacing: 1px;
     }
 }
@@ -374,7 +398,7 @@ nav {
         display: block;
         padding: 15px 25px;
         text-transform: uppercase;
-        @include manropeLight;
+        @include robotoRegular;
         letter-spacing: 1px;
         font-size: 1.6rem;
     }
@@ -1000,7 +1024,6 @@ footer li ul {
         padding: 15px 25px;
         color: #fff;
         text-transform: uppercase;
-        @include manropeLight;
         letter-spacing: 1px;
         font-size: 1.6rem;
     }
@@ -1038,4 +1061,9 @@ footer li ul {
 }
 
 
-/************* PAGE PRODUIT SECTION CARACTERISTIQUE *************/
+/************* PAGE PRODUIT SECTION DOMAINE *************/
+
+#domaine__detail, #domaine__img {
+    flex: 1;
+    justify-content: center;
+}

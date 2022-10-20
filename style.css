@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500&display=swap");
 @font-face {
-  font-family: "Nimbus Roman no9";
+  font-family: "Nimbus Roman no9 Regular";
   src: url("./fonts/nimbus/nimbusromno9l-reg-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nimbus Roman no9 Bold";
+  src: url("./fonts/nimbus/nimbusromno9l-med-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Manrope Regular";
@@ -34,7 +39,7 @@ img {
 }
 
 h1 {
-  font-family: "Nimbus Roman no9";
+  font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
   font-size: 4.8rem;
   letter-spacing: 1px;
@@ -51,14 +56,17 @@ h2 {
 }
 
 h3 {
-  font-family: "Nimbus Roman no9";
+  font-family: "Nimbus Roman no9 Bold";
   font-weight: 300;
   font-size: 2.8rem;
 }
 
 h4 {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   font-weight: 500;
+  color: #131213;
 }
 
 h1, h2, h3, h4, ul, figure, p, span {
@@ -67,8 +75,9 @@ h1, h2, h3, h4, ul, figure, p, span {
   padding-inline-start: 0;
 }
 
-p, a, figcaption, li, input, h4, ::after, span {
-  font-family: "roboto";
+p, a, figcaption, li, input, ::after, span {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 300;
   color: #131213;
   text-decoration: none;
   line-height: 1.6;
@@ -143,8 +152,8 @@ nav ul {
   justify-content: space-evenly;
 }
 nav a {
-  font-family: "Manrope Medium";
-  text-transform: uppercase;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
@@ -329,9 +338,8 @@ nav a {
   display: block;
   padding: 15px 25px;
   text-transform: uppercase;
-  font-family: "Manrope Regular";
-  text-transform: uppercase;
-  font-weight: 500;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 300;
   letter-spacing: 1px;
   font-size: 1.6rem;
 }
@@ -578,7 +586,7 @@ nav a {
   display: flex;
 }
 .figOverlay figcaption {
-  font-family: "Nimbus Roman no9";
+  font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
   font-size: 2.4rem;
 }
@@ -857,7 +865,7 @@ footer li ul {
   gap: 50px;
 }
 #product__container h1, #product__container .product__year, #product__container .product__price--price {
-  font-family: "Nimbus Roman no9";
+  font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
   font-size: 4.8rem;
   letter-spacing: 0;
@@ -919,9 +927,6 @@ footer li ul {
   padding: 15px 25px;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Manrope Regular";
-  text-transform: uppercase;
-  font-weight: 500;
   letter-spacing: 1px;
   font-size: 1.6rem;
 }
@@ -954,6 +959,10 @@ footer li ul {
   justify-content: space-between;
 }
 
-/************* PAGE PRODUIT SECTION CARACTERISTIQUE *************/
+/************* PAGE PRODUIT SECTION DOMAINE *************/
+#domaine__detail, #domaine__img {
+  flex: 1;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=style.css.map */
