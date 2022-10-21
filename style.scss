@@ -997,7 +997,7 @@ footer li ul {
 
 .product_label {
     gap: 15px;
-    span {
+    li {
         background-color: $dark-color;
         color: #fff;
         width: max-content;
@@ -1072,11 +1072,37 @@ footer li ul {
 
 /************* PAGE ARCHIVE FILTRE *************/
 
+
+#archive__page {
+    background-color: $background-color;
+}
+
+
+#section-archive {
+    height: 35vh;
+    background: url('./img/img_domaine.jpg') no-repeat center;
+    background-size: cover;
+}
+
 #archive-filter {
     flex: 0 0 25%;
     border-right: 1px solid $dark-color;
     padding-left: 50px;
 }
+
+#archive__title {
+    padding: 30px;
+    margin: 5% 0;
+    position: relative;
+    h2 {
+        top: -10%;
+    }
+}
+
+input[type="checkbox"] {
+    accent-color: $focus-color;
+}
+
 
 .filter__li {
     gap: 10px;
@@ -1085,4 +1111,18 @@ footer li ul {
 .filter__type {
     gap: 15px;
     padding: 25px 0;
+}
+
+#archive-main {
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    row-gap: 60px;
+}
+
+#archive-main > .product__card {
+    flex: 1 0 33.33%;
+    min-width: 250px;
+    &:hover {
+        border: 1px solid $dark-color;
+    }
 }

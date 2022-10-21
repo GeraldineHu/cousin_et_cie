@@ -901,7 +901,7 @@ footer li ul {
 .product_label {
   gap: 15px;
 }
-.product_label span {
+.product_label li {
   background-color: #131213;
   color: #fff;
   width: max-content;
@@ -967,10 +967,33 @@ footer li ul {
 }
 
 /************* PAGE ARCHIVE FILTRE *************/
+#archive__page {
+  background-color: #FFFDF5;
+}
+
+#section-archive {
+  height: 35vh;
+  background: url("./img/img_domaine.jpg") no-repeat center;
+  background-size: cover;
+}
+
 #archive-filter {
   flex: 0 0 25%;
   border-right: 1px solid #131213;
   padding-left: 50px;
+}
+
+#archive__title {
+  padding: 30px;
+  margin: 5% 0;
+  position: relative;
+}
+#archive__title h2 {
+  top: -10%;
+}
+
+input[type=checkbox] {
+  accent-color: #C4D600;
 }
 
 .filter__li {
@@ -980,6 +1003,20 @@ footer li ul {
 .filter__type {
   gap: 15px;
   padding: 25px 0;
+}
+
+#archive-main {
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  row-gap: 60px;
+}
+
+#archive-main > .product__card {
+  flex: 1 0 33.33%;
+  min-width: 250px;
+}
+#archive-main > .product__card:hover {
+  border: 1px solid #131213;
 }
 
 /*# sourceMappingURL=style.css.map */
