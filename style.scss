@@ -995,7 +995,7 @@ footer li ul {
     }
 }
 
-.product_label {
+.product__label {
     gap: 15px;
     li {
         background-color: $dark-color;
@@ -1003,6 +1003,10 @@ footer li ul {
         width: max-content;
         padding: 5px;
     }
+}
+
+.product__origin {
+    gap: 6px;
 }
 
 

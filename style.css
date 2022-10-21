@@ -898,14 +898,18 @@ footer li ul {
   font-size: 1.4rem;
 }
 
-.product_label {
+.product__label {
   gap: 15px;
 }
-.product_label li {
+.product__label li {
   background-color: #131213;
   color: #fff;
   width: max-content;
   padding: 5px;
+}
+
+.product__origin {
+  gap: 6px;
 }
 
 #product__submit {
