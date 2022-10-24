@@ -157,10 +157,11 @@ nav a {
   letter-spacing: 1px;
 }
 
-#main-nav-desktop .main-list-nav-desktop {
+.main-list-nav-desktop {
   display: none;
 }
-#main-nav-desktop a {
+
+.list__item--white a {
   background: linear-gradient(90deg, #fff 0%, #fff 45%, #131213 45%, #131213 55%, #fff 55%, #fff 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -169,8 +170,7 @@ nav a {
   color: transparent;
   transition: all 800ms linear;
 }
-
-#main-nav-desktop a:hover {
+.list__item--white a:hover {
   background-position: 0% 0%;
   font-size: 1.7rem;
 }
@@ -206,7 +206,7 @@ nav a {
     align-items: center;
   }
 
-  #main-nav-desktop .main-list-nav-desktop {
+  .main-list-nav-desktop {
     display: flex;
     flex: 1;
     text-transform: uppercase;
@@ -217,35 +217,50 @@ nav a {
   }
 }
 /************* NAVIGATION ESHOP *************/
-#eshop__nav {
+.nav__secondary--white {
   background-color: #FFFDF5;
+  border-bottom: 1px solid #131213;
 }
-#eshop__nav .eshop__menu {
-  gap: 20px;
-}
-#eshop__nav .textLogo {
+.nav__secondary--white .textLogo {
   color: #131213;
   text-shadow: none;
 }
 
-#eshop__nav--secondary {
-  background-color: #FFFDF5;
+.nav__secondary--dark {
+  background-color: #131213;
+  border-bottom: 1px solid #fff;
+}
+.nav__secondary--dark .textLogo {
+  color: #fff;
+  text-shadow: none;
+}
+
+.eshop__menu {
+  gap: 20px;
+}
+
+.nav__secondary--menu {
   height: 8vh;
-  border-block: 1px solid #131213;
+  border-bottom: 1px solid #131213;
   box-shadow: 0 5px 6px rgba(19, 18, 19, 0.2);
 }
-#eshop__nav--secondary .eshop__menu {
+
+.eshop__menu {
   flex: 1;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
 }
 
-.eshop__list {
+.menu__list {
   position: relative;
   padding: 15px 0;
 }
-.eshop__list > a {
+.menu__list:hover > .eshop__submenu {
+  display: flex;
+}
+
+.list__item--dark a {
   background: linear-gradient(90deg, black 0%, black 45%, #88B04B 45%, #88B04B 55%, black 55%, black 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -254,11 +269,8 @@ nav a {
   color: transparent;
   transition: all 800ms linear;
 }
-.eshop__list > a:hover {
+.list__item--dark a:hover {
   background-position: 0% 0%;
-}
-.eshop__list:hover > .eshop__submenu {
-  display: flex;
 }
 
 .eshop__submenu {
@@ -273,6 +285,7 @@ nav a {
   display: none;
 }
 .eshop__submenu a {
+  color: #131213;
   font-size: 1.4rem;
 }
 .eshop__submenu a:hover {
@@ -533,18 +546,18 @@ nav a {
   width: auto;
 }
 
-#slideFlow figure {
+.figure__actu {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
-#slideFlow figure img {
+.figure__actu img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: all 600ms ease;
 }
-#slideFlow figure:hover img {
+.figure__actu:hover img {
   transform: scale(1.2);
 }
 
@@ -554,16 +567,16 @@ nav a {
     gap: var(--gap);
   }
 
-  #slideFlow figure {
+  .figure__actu {
     min-width: calc(50% - var(--gap));
   }
-  #slideFlow figure img {
+  .figure__actu img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: all 600ms ease;
   }
-  #slideFlow figure:hover img {
+  .figure__actu:hover img {
     transform: scale(1.2);
   }
 }
@@ -756,7 +769,6 @@ footer li ul {
 
 /************* ESHOP SECTION SELECTION *************/
 #section-selection {
-  height: 100vh;
   align-items: center;
 }
 #section-selection ul {
@@ -809,10 +821,12 @@ footer li ul {
   font-size: 1.4rem;
 }
 
-/************* ESHOP SECTION BOX *************/
-#section-box-eshop {
-  height: 100vh;
+@media (min-width: 780px) {
+  #section-selection {
+    height: 100vh;
+  }
 }
+/************* ESHOP SECTION BOX *************/
 #section-box-eshop h2 {
   line-height: 1;
   top: 5%;
@@ -835,23 +849,34 @@ footer li ul {
   justify-content: center;
 }
 
+@media (min-width: 780px) {
+  #section-box-eshop {
+    height: 100vh;
+  }
+}
 /************* ESHOP SECTION AVANTAGES *************/
 .avantages__description {
   align-items: center;
+  flex-direction: column;
   gap: 50px;
 }
 .avantages__description .avantages__text {
   flex: 1;
 }
 .avantages__description .avantages__img {
-  width: 10%;
+  width: 20%;
 }
 
+@media (min-width: 780px) {
+  .avantages__description {
+    flex-direction: row;
+  }
+
+  .avantages__description .avantages__img {
+    width: 10%;
+  }
+}
 /************* PAGE PRODUIT SECTION PRODUCT *************/
-#product-section {
-  height: 80vh;
-}
-
 .breadcrumb {
   gap: 10px;
 }
@@ -864,6 +889,7 @@ footer li ul {
 
 #product__container {
   gap: 50px;
+  flex-direction: column;
 }
 #product__container h1, #product__container .product__year, #product__container .product__price--price {
   font-family: "Nimbus Roman no9 Regular";
@@ -939,6 +965,15 @@ footer li ul {
   background-color: #88B04B;
 }
 
+@media (min-width: 780px) {
+  #product-section {
+    height: 80vh;
+  }
+
+  #product__container {
+    flex-direction: row;
+  }
+}
 /************* PAGE PRODUIT SECTION DEGUSTATION *************/
 #section-accords {
   gap: 60px;
@@ -959,17 +994,32 @@ footer li ul {
 }
 
 .detail__container {
+  flex-direction: column;
   gap: 20px;
   align-items: flex-start;
   justify-content: space-between;
 }
 
+@media (min-width: 780px) {
+  .detail__container {
+    flex-direction: row;
+  }
+}
 /************* PAGE PRODUIT SECTION DOMAINE *************/
+#section-domaine {
+  flex-direction: column;
+}
+
 #domaine__detail, #domaine__img {
   flex: 1;
   justify-content: center;
 }
 
+@media (min-width: 780px) {
+  #section-domaine {
+    flex-direction: row;
+  }
+}
 /************* PAGE ARCHIVE FILTRE *************/
 #archive__page {
   background-color: #FFFDF5;
@@ -1021,6 +1071,42 @@ input[type=checkbox] {
 }
 #archive-main > .product__card:hover {
   border: 1px solid #131213;
+}
+
+/************ FIGURE *************/
+.figure__actu {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+.figure__actu img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 600ms ease;
+}
+.figure__actu:hover img {
+  transform: scale(1.2);
+}
+
+@media (min-width: 780px) {
+  #slideFlow {
+    --gap: 80px;
+    gap: var(--gap);
+  }
+
+  .figure__actu {
+    min-width: calc(50% - var(--gap));
+  }
+  .figure__actu img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 600ms ease;
+  }
+  .figure__actu:hover img {
+    transform: scale(1.2);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

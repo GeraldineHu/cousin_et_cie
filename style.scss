@@ -200,30 +200,28 @@ nav {
     }
 }
 
-
-#main-nav-desktop {
     .main-list-nav-desktop {
         display: none;
     }
-    a {
-        background:linear-gradient(90deg,
-        #fff 0%, #fff 45%, 
-        $dark-color 45%, $dark-color 55%,
-        #fff 55%, #fff 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-size: 300% 100%;
-        background-position: 100% 0%;
-        color: transparent;
-        transition: all 800ms linear;
-    }
-}
 
-#main-nav-desktop a:hover {
-    background-position: 0% 0%;
-    font-size: 1.7rem;
-  }
+    
+.list__item--white a {
+    background:linear-gradient(90deg,
+    #fff 0%, #fff 45%, 
+    $dark-color 45%, $dark-color 55%,
+    #fff 55%, #fff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 300% 100%;
+    background-position: 100% 0%;
+    color: transparent;
+    transition: all 800ms linear;
+    &:hover {
+        background-position: 0% 0%;
+        font-size: 1.7rem;
+      }
+    }
 
 
 .textLogo {
@@ -256,7 +254,7 @@ nav {
       flex-wrap: nowrap;
       align-items: center;
     }
-    #main-nav-desktop  .main-list-nav-desktop {
+    .main-list-nav-desktop {
       display: flex;
       flex: 1;
       text-transform: uppercase;
@@ -270,54 +268,69 @@ nav {
 
 /************* NAVIGATION ESHOP *************/
 
-#eshop__nav {
+.nav__secondary--white {
     background-color: $background-color;
-    .eshop__menu {
-        gap: 20px;
-    }
+    border-bottom: 1px solid $dark-color;
     .textLogo {
         color: $dark-color;
         text-shadow: none;
     }
 }
 
-#eshop__nav--secondary {
-    background-color: $background-color;
-    height: 8vh;
-    border-block: 1px solid $dark-color;
-    box-shadow: 0 5px 6px rgba(19,18,19,0.2);
-    
-    .eshop__menu {
-        flex: 1;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
+.nav__secondary--dark {
+    background-color: $dark-color;
+    border-bottom: 1px solid #fff;
+    .textLogo {
+        color: #fff;
+        text-shadow: none;
     }
 }
 
-.eshop__list {
+.eshop__menu {
+    gap: 20px;
+}
+
+
+
+.nav__secondary--menu {
+    height: 8vh;
+    border-bottom: 1px solid $dark-color;
+    box-shadow: 0 5px 6px rgba(19,18,19,0.2);
+}
+    
+.eshop__menu {
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+
+.menu__list {
     position: relative;
     padding: 15px 0;
-    & > a {
-        background:linear-gradient(90deg,
-        black 0%, black 45%, 
-        $secondary-color 45%, $secondary-color 55%,
-        black 55%, black 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        background-size: 300% 100%;
-        background-position: 100% 0%;
-        color: transparent;
-        transition: all 800ms linear;
-    }
-    & > a:hover {
-        background-position: 0% 0%;
-      }
     &:hover  > .eshop__submenu {
         display: flex;
-    }
+    }    
 }
+
+.list__item--dark a {
+    background:linear-gradient(90deg,
+    black 0%, black 45%, 
+    $secondary-color 45%, $secondary-color 55%,
+    black 55%, black 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 300% 100%;
+    background-position: 100% 0%;
+    color: transparent;
+    transition: all 800ms linear;
+    &:hover {
+        background-position: 0% 0%;
+      }
+}
+
 
 .eshop__submenu {
     position: absolute;
@@ -330,6 +343,7 @@ nav {
     gap: 15px;
     display: none;
     a {
+        color: $dark-color;
         font-size: 1.4rem;
     }
     a:hover {
@@ -608,7 +622,9 @@ nav {
     width: auto;
 }
 
-#slideFlow figure {
+
+
+.figure__actu {
     position: relative;
     margin: 0;
     overflow: hidden;
@@ -623,14 +639,13 @@ nav {
     }
 }
 
-
 @media (min-width: 780px) {
     #slideFlow {
         --gap: 80px;
 
         gap: var(--gap);
     }
-    #slideFlow figure {
+    .figure__actu {
         min-width: calc(50% - var(--gap));
         img {
             height: 100%;
@@ -846,7 +861,6 @@ footer li ul {
 /************* ESHOP SECTION SELECTION *************/
 
 #section-selection {
-    height: 100vh;
     align-items: center;
     ul {
         text-align: center;
@@ -900,11 +914,17 @@ footer li ul {
 }
 
 
+@media (min-width: 780px) {
+    #section-selection {
+      height: 100vh;
+    }
+  }
+
+
 
 /************* ESHOP SECTION BOX *************/
 
 #section-box-eshop {
-    height: 100vh;
     h2 {
         line-height: 1;
         top: 5%;
@@ -929,26 +949,43 @@ footer li ul {
     justify-content: center;
 }
 
+@media (min-width: 780px) {
+    #section-box-eshop {
+      height: 100vh;
+    }  
+  }
+  
+
 /************* ESHOP SECTION AVANTAGES *************/
 
 .avantages__description {
     align-items: center;
+    flex-direction: column;
     gap: 50px;
     .avantages__text {
         flex: 1;
     }
     .avantages__img {
-        width: 10%;
+        width: 20%;
     }
 }
-
+ 
+  @media (min-width: 780px) {
+    .avantages__description {
+      flex-direction: row;
+    } 
+    .avantages__description .avantages__img {
+      width: 10%;
+    }
+  }
 
 
 /************* PAGE PRODUIT SECTION PRODUCT *************/
 
-#product-section {
-    height: calc(100vh - (12vh + 8vh));
-}
+
+
+
+
 
 .breadcrumb {
     gap: 10px;
@@ -962,6 +999,7 @@ footer li ul {
 
 #product__container {
     gap: 50px;
+    flex-direction: column;
     h1, .product__year, .product__price--price  {
         @include nimbusLight;
         font-size: 4.8rem;
@@ -1037,6 +1075,15 @@ footer li ul {
     }
 }
 
+@media (min-width: 780px) {
+    #product-section {
+        height: calc(100vh - (12vh + 8vh));
+    }
+    #product__container {
+        flex-direction: row;
+    }
+}
+
 
 /************* PAGE PRODUIT SECTION DEGUSTATION *************/
 
@@ -1060,17 +1107,33 @@ footer li ul {
 }
 
 .detail__container {
+    flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     justify-content: space-between;
 }
 
+@media (min-width: 780px) {
+    .detail__container {
+        flex-direction: row;
+    }
+}
 
 /************* PAGE PRODUIT SECTION DOMAINE *************/
+
+#section-domaine {
+    flex-direction: column;
+}
 
 #domaine__detail, #domaine__img {
     flex: 1;
     justify-content: center;
+}
+
+@media (min-width: 780px) {
+    #section-domaine {
+        flex-direction: row;
+    }
 }
 
 
@@ -1128,5 +1191,43 @@ input[type="checkbox"] {
     min-width: 250px;
     &:hover {
         border: 1px solid $dark-color;
+    }
+}
+
+
+/************ FIGURE *************/
+
+.figure__actu {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 600ms ease;
+    }
+    &:hover img{
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 780px) {
+    #slideFlow {
+        --gap: 80px;
+
+        gap: var(--gap);
+    }
+    .figure__actu {
+        min-width: calc(50% - var(--gap));
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all 600ms ease;
+        }
+        &:hover img{
+            transform: scale(1.2);
+        }
     }
 }
