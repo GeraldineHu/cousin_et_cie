@@ -1108,5 +1108,29 @@ input[type=checkbox] {
     transform: scale(1.2);
   }
 }
+/********************** PAGE ACTUALITES *******************/
+@media (min-width: 780px) {
+  #hero-actu {
+    height: 88vh;
+  }
+}
+#section-article figure {
+  flex: 1;
+}
+
+#section-article {
+  padding: 8% 10%;
+}
+
+#section-reseaux .figure__actu {
+  height: 300px;
+  width: 300px;
+}
+#section-reseaux figcaption {
+  display: none;
+}
+#section-reseaux figure:hover figcaption {
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
