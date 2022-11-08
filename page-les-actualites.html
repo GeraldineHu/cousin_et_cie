@@ -5,29 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Les actualités</title>
 </head>
 <body>
     <header class="flexContainer flexColumn">
         <nav class="nav__secondary--dark flexContainer">
-            <ul class="main-list-nav-desktop flexContainer">
-                <li class="menu__list list__item--white"><a href="">À propos</a></li>
-                <li class="menu__list list__item--white"><a href="">Les dégustations</a></li>
+            <div class="hamburger hamburger--spring">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+              <ul class="nav_mobile">
+                <li><a href="">item01</a></li>
+                <li><a href="">item02</a></li>
+                <li><a href="">item03</a></li>
+                <li><a href="">item04</a></li>
+                <li><a href="">item05</a></li>
             </ul>
-            <p class="textLogo">Cousin & Cie</p>
-            <ul class="main-list-nav-desktop flexContainer">
-                <li class="menu__list list__item--white"><a href="">La boutique</a></li>
-                <li class="menu__list list__item--white"><a href="">Les actualités</a></li>
-            </ul>
-            <input type="checkbox" id="hamburger-input" class="burger-shower" />
-            <label id="hamburger-menu" for="hamburger-input">
-                    <ul id="hamburger-nav">
-                        <li><a href="">À propos</a></li>
-                        <li><a href="">Les dégustations</a></li>
-                        <li><a href="">La boutique</a></li>
-                        <li><a href="">Les actualités</a></li>
-                    </ul>
-            </label>
         </nav>
     </header>
     <section class="flexContainer flexColumn" id="hero-actu">
@@ -87,5 +82,6 @@
             </figure>
         </div>
     </section>
+    <script src="hamburger.js"></script>
 </body>
 </html>

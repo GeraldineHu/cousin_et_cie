@@ -5,229 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header id="header__main" class="flexContainer flexColumn">
-        <video class="videoBackground" id="video2" autoplay muted poster="./img/background_poster.jpg">
-            <source src="./img/background_video2.mp4" type="video/mp4">
-        </video>
-        <video class="videoBackground" id="video1" autoplay muted poster="./img/background_poster.jpg">
-            <source src="./img/background_video.mp4" type="video/mp4">
-        </video>
-        <nav class="nav__main flexContainer">
-            <ul class="main-list-nav-desktop">
-                <li class="list__item--white"><a href="">À propos</a></li>
-                <li class="list__item--white"><a href="">Les dégustations</a></li>
-            </ul>
-            <p class="textLogo">Cousin & Cie</p>
-            <ul class="main-list-nav-desktop">
-                <li class="list__item--white"><a href="">La boutique</a></li>
-                <li class="list__item--white"><a href="">Les actualités</a></li>
-            </ul>
-            <input type="checkbox" id="hamburger-input" class="burger-shower" />
-            <label id="hamburger-menu" for="hamburger-input">
-                    <ul id="hamburger-nav">
-                        <li><a href="">À propos</a></li>
-                        <li><a href="">Les dégustations</a></li>
-                        <li><a href="">La boutique</a></li>
-                        <li><a href="">Les actualités</a></li>
-                    </ul>
-            </label>
-        </nav>
-        <div class="flexContainer flexColumn headerTitle centerItems">
-            <h1>Cousin & Compagnie</h1>
-            <h2>Caviste au naturel, depuis 1993</h2>
-            <button class="btn btn__scale btn__color--black">
-                <a href="">La boutique en ligne</a>
-            </button>
-        </div>    
-    </header>
-    <section class="flexContainer flexColumn" id="section-degustation">
-        <div class="flexContainer centerItems title">
-        <h2>Les dégustations</h2>
-        <h3>Un moment unique, une expérience inoubliable.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="flexContainer flex-figure" id="figure-degustation">
-            <figure>
-                <img src="./img/vignette_accueil03.jpg" alt="">
-                <figcaption class="centerItems">Lorem ipsum</figcaption>
-            </figure>
-            <figure>
-                <img src="./img/vignette_accueil01.jpg" alt="">
-                <figcaption class="centerItems">Lorem ipsum</figcaption>
-            </figure>
-            <figure>
-                <img src="./img/vignette_accueil02.jpg" alt="">
-                <figcaption class="centerItems">Lorem ipsum</figcaption>
-            </figure>
-        </div>
-        <button class="btn btn__scale btn__color--black">
-            <a href="">Les ateliers dégustations</a>
-        </button>
-    </section>
-    <section class="flexContainer section-dark" id="section-box">
-        <div class="flexContainer title">
-            <h2>La box</h2>
-            <h3>Le coffret des délices.</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero excepturi illum mollitia tempora magnam est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui optio, minus architecto placeat rem.</p>
-            <button class="btn btn__scale btn__color--green"><a href="">La box mets & vins</a></button>
-        </div>
-        <div class="gridContainer">
-            <div class="bloc01">
-                <img src="./img/vignette_box02.jpg" alt="">
-            </div>
-            <div class="bloc02">
-                <img src="./img/vignette_box01.jpg" alt="">
-            </div>
-            <div class="bloc03">
-                <img src="./img/vignette_box03.jpg" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="flexContainer flexColumn" id="sectionActu">
-        <div class="flexContainer centerItems title">
-            <h2>Le Blog</h2>
-            <h3>Toutes les actualités œnologiques.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        <div class="flexContainer" id="slide">
-            <button class="leftArrow">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 339.4 532" xml:space="preserve">
-                <path d="M266,0l73.4,73.4L146.2,266l193.2,192.6L266,532L0,266L266,0z"/></svg>
-            </button>
-            <div class="flexContainer" id="slideBlock">
-                <div class="flexContainer" id="slideFlow">
-                        <figure class="figure__actu">
-                            <img src="./img/vignette_box02.jpg" alt="">
-                            <div class="flexContainer flexColumn figOverlay">
-                                <figcaption>Article 1</figcaption>
-                                <p>Lire plus</p>
-                            </div>
-                        </figure>
-                        <figure class="figure__actu">
-                            <img src="./img/img_blog01.jpg" alt="">
-                            <div class="flexContainer flexColumn figOverlay">
-                                <figcaption>Article 2</figcaption>
-                                <p>Lire plus</p>
-                            </div>
-                        </figure>
-                        <figure class="figure__actu">
-                            <img src="./img/img_blog02.jpg" alt="">
-                            <div class="flexContainer flexColumn figOverlay">
-                                <figcaption>Article 3</figcaption>
-                                <p>Lire plus 
-                                    <svg version="1.1" id="svgFlecheArticle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 425.6 425.6" xml:space="preserve">
-                                        <style type="text/css"> .svgFleche{stroke-width:8;stroke-miterlimit:10;} </style>
-                                        <path class="svgCercle" d="M212.8,425.6C95.3,425.6,0,330.3,0,212.8S95.3,0,212.8,0s212.8,95.3,212.8,212.8S330.3,425.6,212.8,425.6z"/>
-                                        <path class="svgFleche" d="M204.9,100.8l106.4,106.4H112v11.2h199.3L204.9,324.8h15.8l112-112l-112-112L204.9,100.8z"/>
-                                    </svg>
-                                </p>
-                            </div>
-                        </figure>
-                        <figure class="figure__actu">
-                            <img src="./img/vignette_accueil02.jpg" alt="">
-                            <div class="flexContainer flexColumn figOverlay">
-                                <figcaption>Article 4</figcaption>
-                                <p>Lire plus</p>
-                            </div>
-                        </figure>
+    <header class="header__fixed">
+        <nav class="burger__nav flexContainer">
+            <div class="nav__main nav__main--white flexContainer">
+                <div><a href="">FR</a></div>
+                <div class="flexContainer"><a href="">Cousin & Cie</a></div>
+                <div class="burger__icon burger__icon--white flexContainer">
+                    <div class="flexContainer flexColumn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
-            <button class="rightArrow">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 339.4 532" xml:space="preserve">
-                <path d="M73.4,532L0,458.6L193.2,266L0,73.4L73.4,0l266,266L73.4,532z"/></svg>
-           </button>
+            <ul class="burger__list flexContainer flexColumn">
+                <li class="burger__list--close">X</li>
+                <li><a href="">La boutique en ligne</a></li>
+                <li><a href="">Les dégustations</a></li>
+                <li><a href="">à propos</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="flexContainer" id="hero-section">
+        <div class="flexContainer flexColumn hero__bloc hero__bloc--1">
+            <a href=""><h2>Les Ateliers dégustation</h2></a>
+            <button class="btn btn__scale btn__color--black">
+                <a href="">Découvrir</a>
+            </button>
         </div>
-        <div class="flexContainer flexColumn centerItems">
-            <p>Inscrivez-vous à la newsletter et soyez informé de toutes nos actualités !</p>
-            <form action="">
-                <input id="input__newsletter" type="email" placeholder="Votre adresse mail">
-                <button class="submit__newsletter">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 560.4 559.9" xml:space="preserve">
-                    <path d="M494.3,89.4l-230,230l60,176L494.3,89.4z M240.3,295.4l230-230l-406,172L240.3,295.4z M536.3,1.4c14-6,30,8,22,22l-220,526 c-6,14-28,14-32,0l-76-220l-218-76c-16-4-16-24-2-30L536.3,1.4z"/>
-                    </svg>
-                 </button>
-            </form>
+        <div class="flexContainer flexColumn hero__bloc hero__bloc--2">
+            <a href=""><h2>La boutique en ligne</h2></a>
+            <button class="btn btn__scale btn__color--black">
+                <a href="">Visiter</a>
+            </button>
         </div>
     </section>
-    <footer class="flexContainer flexColumn">
-        <div class="flexContainer centerItems">
-            <ul class="flexContainer flexGap">
-                <li>
-                    <a href="">
-                        <svg fill="#000000" id="svgFacebook" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50">
-                        <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg fill="#000000" id="svgInstagram" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50">
-                        <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"/></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg fill="#000000" id="svgLinkedin" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50">
-                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z"/>
-                        <path class="svgLinkedinLetters" d="M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="flexContainer" id="footerInfos">
-            <div>
-                <ul>
-                    <li>Cousin et Compagnie</li>
-                    <li>Place du Parlement - Bordeaux</li>
-                    <li>05 99 99 99 99</li>
-                    <li>Ouverture du lundi au samedi</li>
-                </ul>
-            </div>
-            <div>
-                <ul class="flexContainer">
-                    <li><a href="">Mon compte</a></li>
-                    <li><a href="">Livraisons</a></li>
-                    <li><a href="">Paiement sécurisé</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul class="flexContainer">
-                    <li><a href="">Nous contacter</a></li>
-                    <li><a href="">À propos</a></li>
-                    <li><a href="">Actualités</a></li>
-                </ul>
-            </div>
-            <div>
-                <ul class="flexContainer">
-                    <li><a href="">Le magasin</a></li>
-                    <li><a href="">Boutique en ligne</a></li>
-                    <li><a href="">Ateliers dégustations</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="flexContainer">
-            <ul class="flexContainer">
-                <li><a href="">Mentions légales & CGV</a></li>
-                <li><a href="">Cookies</a></li>
-                <li>L'abus d'alcool est dangeureux pour la santé. Consommer avec modération.</li>
-                <li><ul class="flexContainer">
-                    <li>
-                        <svg fill="#000000" class="svgCard" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50">
-                        <path d="M 5 7 C 2.25 7 0 9.25 0 12 L 0 38 C 0 40.75 2.25 43 5 43 L 45 43 C 47.75 43 50 40.75 50 38 L 50 12 C 50 9.25 47.75 7 45 7 Z M 5 9 L 45 9 C 46.667969 9 48 10.332031 48 12 L 48 38 C 48 39.667969 46.667969 41 45 41 L 5 41 C 3.332031 41 2 39.667969 2 38 L 2 12 C 2 10.332031 3.332031 9 5 9 Z M 17 13 C 10.382813 13 5 18.382813 5 25 C 5 31.617188 10.382813 37 17 37 C 20.078125 37 22.875 35.816406 25 33.90625 C 27.125 35.816406 29.925781 37 33 37 C 39.617188 37 45 31.617188 45 25 C 45 18.382813 39.617188 13 33 13 C 29.925781 13 27.125 14.183594 25 16.09375 C 22.875 14.183594 20.078125 13 17 13 Z M 33 15 C 38.535156 15 43 19.464844 43 25 C 43 30.535156 38.535156 35 33 35 C 30.449219 35 28.109375 34.066406 26.34375 32.5 C 27.996094 30.441406 29 27.839844 29 25 C 29 22.160156 27.996094 19.558594 26.34375 17.5 C 28.109375 15.933594 30.449219 15 33 15 Z"/></svg>
-                    </li>
-                    <li>
-                        <svg fill="#000000" class="svgCard" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50">
-                        <path d="M 5 7 C 2.25 7 0 9.25 0 12 L 0 38 C 0 40.75 2.25 43 5 43 L 45 43 C 47.75 43 50 40.75 50 38 L 50 12 C 50 9.25 47.75 7 45 7 Z M 5 9 L 45 9 C 46.667969 9 48 10.332031 48 12 L 48 38 C 48 39.667969 46.667969 41 45 41 L 5 41 C 3.332031 41 2 39.667969 2 38 L 2 12 C 2 10.332031 3.332031 9 5 9 Z M 29.6875 19.40625 C 26.585938 19.40625 25 20.933594 25 22.875 C 25 26.386719 29.0625 25.914063 29.0625 27.71875 C 29.0625 28.023438 28.828125 28.75 27.125 28.75 C 25.417969 28.75 24.3125 28.09375 24.3125 28.09375 L 23.78125 30.46875 C 23.78125 30.46875 24.886719 31.09375 27 31.09375 C 29.113281 31.09375 32.03125 29.476563 32.03125 27.125 C 32.03125 24.296875 27.96875 24.074219 27.96875 22.8125 C 27.96875 22.167969 28.46875 21.6875 29.9375 21.6875 C 30.890625 21.6875 31.96875 22.40625 31.96875 22.40625 L 32.46875 19.96875 C 32.46875 19.96875 31.050781 19.40625 29.6875 19.40625 Z M 16.46875 19.625 L 13.78125 27.5625 C 13.78125 27.5625 13.597656 26.886719 13.53125 26.46875 C 11.996094 23.023438 9.5 21.75 9.5 21.75 L 11.875 30.75 L 15.125 30.75 L 19.625 19.625 Z M 20.78125 19.625 L 19.03125 30.75 L 22 30.75 L 23.78125 19.625 Z M 36.8125 19.625 L 31.96875 30.75 L 34.90625 30.75 L 35.5 29.15625 L 39.1875 29.15625 L 39.5 30.75 L 42.1875 30.75 L 39.90625 19.625 Z M 6.25 19.65625 C 6.25 19.65625 12.054688 21.453125 13.40625 25.8125 L 12.40625 20.75 C 12.40625 20.75 11.976563 19.65625 10.8125 19.65625 Z M 37.9375 22.84375 L 38.75 27.03125 L 36.3125 27.03125 Z"/></svg>
-                    </li>
-                    <li></li>
-                </ul></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="main.js"></script>
-    <script src="video.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

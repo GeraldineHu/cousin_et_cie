@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 @font-face {
     font-family: "Nimbus Roman no9 Regular";
@@ -43,13 +43,13 @@
     text-transform: uppercase;
 }
 
-@mixin robotoRegular {
-    font-family: 'Roboto Flex', sans-serif;
+@mixin montserratLight {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
 
-@mixin robotoMedium {
-    font-family: 'Roboto Flex', sans-serif;
+@mixin montserratRegular {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
@@ -91,7 +91,6 @@ h1 {
 
 h2 {
     @include manropeLight;
-    font-size: 2.6rem;
     color: white;
     opacity: 0.5;
     letter-spacing: 3px;
@@ -103,7 +102,7 @@ h3 {
 }
 
 h4, .filter__title {
-    @include robotoMedium;
+    @include montserratRegular;
     text-transform: uppercase;
     font-weight: 500;
     color: $dark-color;
@@ -116,7 +115,7 @@ h1, h2, h3, h4, ul, figure, p, span {
 }
 
 p, a, figcaption, li, input, ::after, span {
-    @include robotoRegular;
+    @include montserratRegular;
     color: $dark-color;
     text-decoration: none;
     line-height: 1.6;
@@ -131,6 +130,8 @@ section {
     padding: 5% 10%;
     column-gap: 70px;
     row-gap: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width) {
@@ -172,12 +173,25 @@ section {
     flex-direction: column;
     gap: 20px;
     h2 {
-        font-size: 7.5rem;
+        font-size: 2rem;
         color: $tertiary-color;
         letter-spacing: 0;
-        opacity: 0.2;
-        position: absolute;
-        top: -60px;
+        opacity: 0.8;
+    }
+}
+
+@media (min-width: 780px) {
+    .title {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+            font-size: 7.5rem;
+            opacity: 0.2;
+            position: absolute;
+            top: -60px;
+        }
     }
 }
 
@@ -191,62 +205,15 @@ nav {
     flex-wrap: wrap;
     justify-content: space-around;
     ul {
-        text-transform: uppercase;
         justify-content: space-evenly;
         }
     a {
-        @include robotoMedium;
+        @include montserratRegular;
         letter-spacing: 1px;
+        text-transform: uppercase;
     }
 }
 
-    .main-list-nav-desktop {
-        display: none;
-    }
-
-    
-.list__item--white a {
-    background:linear-gradient(90deg,
-    #fff 0%, #fff 45%, 
-    $dark-color 45%, $dark-color 55%,
-    #fff 55%, #fff 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 300% 100%;
-    background-position: 100% 0%;
-    color: transparent;
-    transition: all 800ms linear;
-    &:hover {
-        background-position: 0% 0%;
-        font-size: 1.7rem;
-      }
-    }
-
-
-.textLogo {
-    font-family: 'Nimbus Roman no9';
-    font-weight: 500;
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 1px 1px $dark-color;
-}
-
-#hamburger-menu {
-    flex: 1 1 100%;
-}
-#hamburger-input {
-    width: 40px;
-}
-
-#hamburger-nav {
-    display: none;
-    padding: 20px;
-  }
-  
-#hamburger-input:checked + #hamburger-menu #hamburger-nav {
-    display: block;
-}
   
 
 @media (min-width: 780px) {
@@ -254,111 +221,12 @@ nav {
       flex-wrap: nowrap;
       align-items: center;
     }
-    .main-list-nav-desktop {
-      display: flex;
-      flex: 1;
-      text-transform: uppercase;
-    }
-    #hamburger-input, #hamburger-menu {
-      display: none;
-    }
   }
 
 
 
 /************* NAVIGATION ESHOP *************/
 
-.nav__secondary--white {
-    background-color: $background-color;
-    border-bottom: 1px solid $dark-color;
-    .textLogo {
-        color: $dark-color;
-        text-shadow: none;
-    }
-}
-
-.nav__secondary--dark {
-    background-color: $dark-color;
-    border-bottom: 1px solid #fff;
-    .textLogo {
-        color: #fff;
-        text-shadow: none;
-    }
-}
-
-.eshop__menu {
-    gap: 20px;
-}
-
-
-
-.nav__secondary--menu {
-    height: 8vh;
-    border-bottom: 1px solid $dark-color;
-    box-shadow: 0 5px 6px rgba(19,18,19,0.2);
-}
-    
-.eshop__menu {
-    flex: 1;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-}
-
-
-.menu__list {
-    position: relative;
-    padding: 15px 0;
-    &:hover  > .eshop__submenu {
-        display: flex;
-    }    
-}
-
-.list__item--dark a {
-    background:linear-gradient(90deg,
-    black 0%, black 45%, 
-    $secondary-color 45%, $secondary-color 55%,
-    black 55%, black 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 300% 100%;
-    background-position: 100% 0%;
-    color: transparent;
-    transition: all 800ms linear;
-    &:hover {
-        background-position: 0% 0%;
-      }
-}
-
-
-.eshop__submenu {
-    position: absolute;
-    top: 100%;
-    background-color: $background-color;
-    border: 1px solid $dark-color;
-    box-shadow: inset 0 5px 6px rgba(19,18,19,0.2);
-    width: max-content;
-    padding: 15px 25px;
-    gap: 15px;
-    display: none;
-    a {
-        color: $dark-color;
-        font-size: 1.4rem;
-    }
-    a:hover {
-        color: $secondary-color;
-      }
-}
-
-
-
-.svg-icon {
-    height: 25px;
-    fill: $dark-color;
-    stroke-width: 1px;
-    stroke: $dark-color;
-}
 
 
 /*************** HEADER ***************/
@@ -401,6 +269,10 @@ nav {
         color: #fff;
         text-shadow: 1px 1px $dark-color;
     }
+    h2 {
+        @include montserratLight;
+        font-size: 2rem;
+    }
 }
 
 .btn {
@@ -412,7 +284,7 @@ nav {
         display: block;
         padding: 15px 25px;
         text-transform: uppercase;
-        @include robotoRegular;
+        @include montserratRegular;
         letter-spacing: 1px;
         font-size: 1.6rem;
     }
@@ -843,7 +715,7 @@ footer li ul {
 /*************** ESHOP SECTION SLIDE ***************/
 
 #slide-section {
-    background: url('./img/header_eshop1.jpg') no-repeat 0 65%;
+    background: url('./img/eshop_background.jpg') no-repeat 0 65%;
     background-size: cover;
     background-attachment: fixed;
     height: calc(100vh - (12vh + 8vh));
@@ -934,14 +806,20 @@ footer li ul {
 #box__container {
     gap: 60px;
     height: 90%;
+    flex-direction: column;
 }
 
 .box__img {
-    width: 40%;
+    height: 40vh;
     img {
         object-fit: cover;
         height: 100%;
+        width: 100%;
     }
+}
+
+#box__container div:nth-child(3) {
+    display: none;
 }
 
 
@@ -952,7 +830,17 @@ footer li ul {
 @media (min-width: 780px) {
     #section-box-eshop {
       height: 100vh;
-    }  
+    }
+    #box__container {
+        flex-direction: row;
+    }
+    .box__img {
+        width: 40%;
+        height: auto;
+    }
+    #box__container div:nth-child(3) {
+        display: block;
+    }
   }
   
 
@@ -997,9 +885,10 @@ footer li ul {
     }
 }
 
-#product__container {
+.product__container {
     gap: 50px;
     flex-direction: column;
+    height: 85%;
     h1, .product__year, .product__price--price  {
         @include nimbusLight;
         font-size: 4.8rem;
@@ -1008,23 +897,26 @@ footer li ul {
     }
 }
 
-#product__img {
+.product__img {
     flex: 1;
     overflow: hidden;
     img {
         transition: all 300ms linear;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     &:hover img {
         transform: scale(3);
     }
 }
 
-#product__description {
+.product__description {
     flex: 2;
     gap: 20px;
 }
 
-#product__action {
+.product__action {
     flex: 1;
     gap: 20px;
     align-items: center;
@@ -1048,7 +940,7 @@ footer li ul {
 }
 
 
-#product__submit {
+.product__submit {
     width: auto;
     #product__quantity {
         border: 1px solid $dark-color;
@@ -1079,7 +971,7 @@ footer li ul {
     #product-section {
         height: calc(100vh - (12vh + 8vh));
     }
-    #product__container {
+    .product__container {
         flex-direction: row;
     }
 }
@@ -1089,7 +981,7 @@ footer li ul {
 
 
 #section-accords {
-    gap: 60px;
+    gap: 0;
     h4 {
         color: #fff;
     }
@@ -1106,6 +998,10 @@ footer li ul {
     }
 }
 
+#section-caracteristiques {
+    gap: 0;
+}
+
 .detail__container {
     flex-direction: column;
     gap: 20px;
@@ -1114,6 +1010,9 @@ footer li ul {
 }
 
 @media (min-width: 780px) {
+    #section-accords, #section-caracteristiques {
+        gap: 40px;
+    }
     .detail__container {
         flex-direction: row;
     }
@@ -1125,7 +1024,7 @@ footer li ul {
     flex-direction: column;
 }
 
-#domaine__detail, #domaine__img {
+.domaine__detail {
     flex: 1;
     justify-content: center;
 }
@@ -1259,5 +1158,357 @@ input[type="checkbox"] {
     }
     figure:hover figcaption {
         display: block;
+    }
+}
+
+
+/********************** PAGE BOX ************************/
+
+#box__duration {
+    border: 1px solid $dark-color;
+    display: block;
+    width: 100%;
+    height: 8vh;
+    font-size: 2rem;
+    padding-left: 20px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.chef__detail {
+    flex: 1;
+    justify-content: center;
+    img {
+        width: 100%;
+        height: 65vh;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+/**************************** SLIDER **************************/
+
+.figure__slick {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    height: 50vh;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 600ms ease;
+    }
+    &:hover img{
+        transform: scale(1.2);
+    }
+}
+
+
+.slick-slide {
+    padding: 0 20px;
+}
+
+.slick-prev, .slick-next { 
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.slick-prev {
+    left: -5%;
+}
+
+.slick-next {
+    right: -5%;
+}
+
+.arrow__prev, .arrow__next {
+    height: 40px;
+    transition: all 500ms ease-in-out;
+    &:hover {
+        fill: #88B04B;
+    }
+}
+
+
+
+/************************************** PAGE VIN ACCORDEON ******************************/
+
+.title__accordeon{
+    justify-content: space-between;
+    padding-bottom: 20px;
+    img {
+        width: 8px;
+    }
+}
+.detail__list {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail__container--accordeon {
+    display: none;
+    gap: 60px;
+}
+
+.open__accordeon {
+    transform: scale(-1);
+}
+
+
+@media (min-width: 780px) {
+    .title__accordeon {
+        justify-content: center;
+        img {
+            display: none;
+        }
+    }
+    .detail__list {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .detail__container--accordeon {
+        display: flex;
+    }
+}
+
+
+
+/********************* HERO SECTION ************************/
+
+.header__fixed {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.header__static {
+    position: static;
+    width: 100%;
+}
+
+.nav__main {
+    width: 100%;
+    padding: 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    & > div {
+        flex: 1;
+    }
+    & > div:nth-child(2) {
+        justify-content: center;
+    }
+    &--white a {
+        color: #fff;
+    }
+    &--dark a {
+        color: $dark-color;
+    }
+}
+
+#hero-section {
+    height: 100vh;
+    flex-direction: column;
+    background-color: $dark-color;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    h2 {
+        @include nimbusLight;
+        opacity: 1;
+        text-align: center;
+        font-size: 3rem;
+        text-transform: none;
+        filter: drop-shadow(1px 1px 2px $dark-color);
+    }
+}
+
+.hero__bloc {
+    flex: 1 1 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: flex 1000ms ease-in-out, opacity 500ms linear;
+}
+
+.hero__bloc--1 {
+    background: url('./img/pexels-галина-ласаева-13516342.jpg') center;
+    background-size: cover;
+}
+
+.hero__bloc--2 {
+    background: url('./img/pexels-dario-fernandez-ruz-6440625.jpg') center;
+    background-size: cover;
+}
+
+
+@media (min-width: 780px) {
+    #hero-section {
+        flex-direction: row;
+    }
+    .hero__bloc {
+        button {
+            opacity: 0;
+        }
+    }
+    .hero__bloc:hover {
+        flex: 1 1 80%;
+        background-size: cover;
+        button {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/******************** BURGER ********************/
+
+.burger__nav{
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+.burger__icon {
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    div {
+        gap: 2px;
+    }
+    span {
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+    }
+    &--white span {
+        background-color: $primary-color;
+    }
+    &--dark span {
+        background-color: $dark-color;
+    }
+}
+
+.icon__svg {
+    height: 26px;
+    stroke-width: 10;
+    &--white {
+        fill: #fff;
+        stroke: #fff;
+    }
+    &--dark {
+        fill: $dark-color;
+        stroke: $dark-color;
+    }
+}
+
+.burger__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgba(19, 18, 19, 1);
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    overflow: hidden;
+    transition: height 700ms ease-in-out;
+    li {
+        opacity: 0;
+        color: #fff;
+        transition: opacity 1200ms ease-in-out;
+    }
+    li a {
+        color: #fff;
+        font-weight: 300;
+    }
+}
+
+.burger__list--open {
+    height: 100vh;
+    li {
+        opacity: 1;
+    }
+}
+
+.burger__list--close {
+    font-weight: 800;
+    cursor: pointer;
+    padding: 15px;
+}
+
+@media (min-width: 780px) {
+    .burger__list {
+        background-color: rgba(19, 18, 19, 0.9);
+    }
+}
+
+/************************** NAV ESHOP *******************************/
+
+.nav__eshop {
+    background-color: $dark-color;
+    position: sticky;
+    top: 0;
+    height: auto;
+    transition: all 500ms ease-in-out;
+    transform-origin: top;
+    ul {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    li a {
+        color: #fff;
+        font-weight: 300;
+    }
+}
+
+.nav__accordeon {
+    display: flex;
+    justify-content: center;
+    span {
+        color: #fff;
+    }
+}
+
+.nav__accordeon--detail {
+    width: 100%;
+}
+
+@media (min-width: 780px) {
+    .nav__accordeon {
+        display: none;
+    }
+    .nav__eshop {
+        height: 12vh;
+        ul {
+            display: flex;
+        }
+    }
+}
+
+/*********************************** ESHOP HOME *********************************/
+#section-slide {
+    background: url('./img/eshop_background.jpg') no-repeat 0 60%;
+    background-size: cover;
+    height: calc(100vh - 12vh);
+    h3 {
+        font-size: 4.2rem;
+    }
+    h3, p {
+        color: #fff;
+        text-shadow: 1px 1px $dark-color;
     }
 }

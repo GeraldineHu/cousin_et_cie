@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
 @font-face {
   font-family: "Nimbus Roman no9 Regular";
   src: url("./fonts/nimbus/nimbusromno9l-reg-webfont.woff2") format("woff2");
@@ -49,7 +50,6 @@ h2 {
   font-family: "Manrope Regular";
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 2.6rem;
   color: white;
   opacity: 0.5;
   letter-spacing: 3px;
@@ -62,7 +62,7 @@ h3 {
 }
 
 h4, .filter__title {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   font-weight: 500;
@@ -76,8 +76,8 @@ h1, h2, h3, h4, ul, figure, p, span {
 }
 
 p, a, figcaption, li, input, ::after, span {
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   color: #131213;
   text-decoration: none;
   line-height: 1.6;
@@ -92,6 +92,8 @@ section {
   padding: 5% 10%;
   column-gap: 70px;
   row-gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width) {
@@ -131,14 +133,26 @@ section {
   gap: 20px;
 }
 .title h2 {
-  font-size: 7.5rem;
+  font-size: 2rem;
   color: #BCBED5;
   letter-spacing: 0;
-  opacity: 0.2;
-  position: absolute;
-  top: -60px;
+  opacity: 0.8;
 }
 
+@media (min-width: 780px) {
+  .title {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .title h2 {
+    font-size: 7.5rem;
+    opacity: 0.2;
+    position: absolute;
+    top: -60px;
+  }
+}
 /***************** NAV ******************/
 nav {
   position: relative;
@@ -148,56 +162,13 @@ nav {
   justify-content: space-around;
 }
 nav ul {
-  text-transform: uppercase;
   justify-content: space-evenly;
 }
 nav a {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
-}
-
-.main-list-nav-desktop {
-  display: none;
-}
-
-.list__item--white a {
-  background: linear-gradient(90deg, #fff 0%, #fff 45%, #131213 45%, #131213 55%, #fff 55%, #fff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 300% 100%;
-  background-position: 100% 0%;
-  color: transparent;
-  transition: all 800ms linear;
-}
-.list__item--white a:hover {
-  background-position: 0% 0%;
-  font-size: 1.7rem;
-}
-
-.textLogo {
-  font-family: "Nimbus Roman no9";
-  font-weight: 500;
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 1px 1px #131213;
-}
-
-#hamburger-menu {
-  flex: 1 1 100%;
-}
-
-#hamburger-input {
-  width: 40px;
-}
-
-#hamburger-nav {
-  display: none;
-  padding: 20px;
-}
-
-#hamburger-input:checked + #hamburger-menu #hamburger-nav {
-  display: block;
+  text-transform: uppercase;
 }
 
 @media (min-width: 780px) {
@@ -205,100 +176,8 @@ nav a {
     flex-wrap: nowrap;
     align-items: center;
   }
-
-  .main-list-nav-desktop {
-    display: flex;
-    flex: 1;
-    text-transform: uppercase;
-  }
-
-  #hamburger-input, #hamburger-menu {
-    display: none;
-  }
 }
 /************* NAVIGATION ESHOP *************/
-.nav__secondary--white {
-  background-color: #FFFDF5;
-  border-bottom: 1px solid #131213;
-}
-.nav__secondary--white .textLogo {
-  color: #131213;
-  text-shadow: none;
-}
-
-.nav__secondary--dark {
-  background-color: #131213;
-  border-bottom: 1px solid #fff;
-}
-.nav__secondary--dark .textLogo {
-  color: #fff;
-  text-shadow: none;
-}
-
-.eshop__menu {
-  gap: 20px;
-}
-
-.nav__secondary--menu {
-  height: 8vh;
-  border-bottom: 1px solid #131213;
-  box-shadow: 0 5px 6px rgba(19, 18, 19, 0.2);
-}
-
-.eshop__menu {
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-}
-
-.menu__list {
-  position: relative;
-  padding: 15px 0;
-}
-.menu__list:hover > .eshop__submenu {
-  display: flex;
-}
-
-.list__item--dark a {
-  background: linear-gradient(90deg, black 0%, black 45%, #88B04B 45%, #88B04B 55%, black 55%, black 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 300% 100%;
-  background-position: 100% 0%;
-  color: transparent;
-  transition: all 800ms linear;
-}
-.list__item--dark a:hover {
-  background-position: 0% 0%;
-}
-
-.eshop__submenu {
-  position: absolute;
-  top: 100%;
-  background-color: #FFFDF5;
-  border: 1px solid #131213;
-  box-shadow: inset 0 5px 6px rgba(19, 18, 19, 0.2);
-  width: max-content;
-  padding: 15px 25px;
-  gap: 15px;
-  display: none;
-}
-.eshop__submenu a {
-  color: #131213;
-  font-size: 1.4rem;
-}
-.eshop__submenu a:hover {
-  color: #88B04B;
-}
-
-.svg-icon {
-  height: 25px;
-  fill: #131213;
-  stroke-width: 1px;
-  stroke: #131213;
-}
-
 /*************** HEADER ***************/
 #header__main {
   position: relative;
@@ -340,6 +219,11 @@ nav a {
   color: #fff;
   text-shadow: 1px 1px #131213;
 }
+.headerTitle h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
 
 .btn {
   text-align: center;
@@ -351,8 +235,8 @@ nav a {
   display: block;
   padding: 15px 25px;
   text-transform: uppercase;
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   letter-spacing: 1px;
   font-size: 1.6rem;
 }
@@ -754,7 +638,7 @@ footer li ul {
 }
 /*************** ESHOP SECTION SLIDE ***************/
 #slide-section {
-  background: url("./img/header_eshop1.jpg") no-repeat 0 65%;
+  background: url("./img/eshop_background.jpg") no-repeat 0 65%;
   background-size: cover;
   background-attachment: fixed;
   height: 80vh;
@@ -835,14 +719,20 @@ footer li ul {
 #box__container {
   gap: 60px;
   height: 90%;
+  flex-direction: column;
 }
 
 .box__img {
-  width: 40%;
+  height: 40vh;
 }
 .box__img img {
   object-fit: cover;
   height: 100%;
+  width: 100%;
+}
+
+#box__container div:nth-child(3) {
+  display: none;
 }
 
 #box__description {
@@ -852,6 +742,19 @@ footer li ul {
 @media (min-width: 780px) {
   #section-box-eshop {
     height: 100vh;
+  }
+
+  #box__container {
+    flex-direction: row;
+  }
+
+  .box__img {
+    width: 40%;
+    height: auto;
+  }
+
+  #box__container div:nth-child(3) {
+    display: block;
   }
 }
 /************* ESHOP SECTION AVANTAGES *************/
@@ -887,11 +790,12 @@ footer li ul {
   color: #BCBED5;
 }
 
-#product__container {
+.product__container {
   gap: 50px;
   flex-direction: column;
+  height: 85%;
 }
-#product__container h1, #product__container .product__year, #product__container .product__price--price {
+.product__container h1, .product__container .product__year, .product__container .product__price--price {
   font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
   font-size: 4.8rem;
@@ -899,28 +803,31 @@ footer li ul {
   line-height: 1;
 }
 
-#product__img {
+.product__img {
   flex: 1;
   overflow: hidden;
 }
-#product__img img {
+.product__img img {
   transition: all 300ms linear;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-#product__img:hover img {
+.product__img:hover img {
   transform: scale(3);
 }
 
-#product__description {
+.product__description {
   flex: 2;
   gap: 20px;
 }
 
-#product__action {
+.product__action {
   flex: 1;
   gap: 20px;
   align-items: center;
 }
-#product__action .product__price--type {
+.product__action .product__price--type {
   font-size: 1.4rem;
 }
 
@@ -938,10 +845,10 @@ footer li ul {
   gap: 6px;
 }
 
-#product__submit {
+.product__submit {
   width: auto;
 }
-#product__submit #product__quantity {
+.product__submit #product__quantity {
   border: 1px solid #131213;
   display: block;
   width: 100%;
@@ -949,10 +856,10 @@ footer li ul {
   font-size: 2rem;
   padding-left: 20px;
 }
-#product__submit #product__quantity:focus {
+.product__submit #product__quantity:focus {
   outline: none;
 }
-#product__submit input[type=submit] {
+.product__submit input[type=submit] {
   border: none;
   outline: none;
   padding: 15px 25px;
@@ -961,7 +868,7 @@ footer li ul {
   letter-spacing: 1px;
   font-size: 1.6rem;
 }
-#product__submit input[type=submit]:focus {
+.product__submit input[type=submit]:focus {
   background-color: #88B04B;
 }
 
@@ -970,13 +877,13 @@ footer li ul {
     height: 80vh;
   }
 
-  #product__container {
+  .product__container {
     flex-direction: row;
   }
 }
 /************* PAGE PRODUIT SECTION DEGUSTATION *************/
 #section-accords {
-  gap: 60px;
+  gap: 0;
 }
 #section-accords h4 {
   color: #fff;
@@ -993,6 +900,10 @@ footer li ul {
   font-weight: 300;
 }
 
+#section-caracteristiques {
+  gap: 0;
+}
+
 .detail__container {
   flex-direction: column;
   gap: 20px;
@@ -1001,6 +912,10 @@ footer li ul {
 }
 
 @media (min-width: 780px) {
+  #section-accords, #section-caracteristiques {
+    gap: 40px;
+  }
+
   .detail__container {
     flex-direction: row;
   }
@@ -1010,7 +925,7 @@ footer li ul {
   flex-direction: column;
 }
 
-#domaine__detail, #domaine__img {
+.domaine__detail {
   flex: 1;
   justify-content: center;
 }
@@ -1131,6 +1046,340 @@ input[type=checkbox] {
 }
 #section-reseaux figure:hover figcaption {
   display: block;
+}
+
+/********************** PAGE BOX ************************/
+#box__duration {
+  border: 1px solid #131213;
+  display: block;
+  width: 100%;
+  height: 8vh;
+  font-size: 2rem;
+  padding-left: 20px;
+}
+#box__duration:focus {
+  outline: none;
+}
+
+.chef__detail {
+  flex: 1;
+  justify-content: center;
+}
+.chef__detail img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
+/**************************** SLIDER **************************/
+.figure__slick {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  height: 50vh;
+}
+.figure__slick img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 600ms ease;
+}
+.figure__slick:hover img {
+  transform: scale(1.2);
+}
+
+.slick-slide {
+  padding: 0 20px;
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slick-prev {
+  left: -5%;
+}
+
+.slick-next {
+  right: -5%;
+}
+
+.arrow__prev, .arrow__next {
+  height: 40px;
+  transition: all 500ms ease-in-out;
+}
+.arrow__prev:hover, .arrow__next:hover {
+  fill: #88B04B;
+}
+
+/************************************** PAGE VIN ACCORDEON ******************************/
+.title__accordeon {
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.title__accordeon img {
+  width: 8px;
+}
+
+.detail__list {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail__container--accordeon {
+  display: none;
+  gap: 60px;
+}
+
+.open__accordeon {
+  transform: scale(-1);
+}
+
+@media (min-width: 780px) {
+  .title__accordeon {
+    justify-content: center;
+  }
+  .title__accordeon img {
+    display: none;
+  }
+
+  .detail__list {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .detail__container--accordeon {
+    display: flex;
+  }
+}
+/********************* HERO SECTION ************************/
+.header__fixed {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header__static {
+  position: static;
+  width: 100%;
+}
+
+.nav__main {
+  width: 100%;
+  padding: 0 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__main > div {
+  flex: 1;
+}
+.nav__main > div:nth-child(2) {
+  justify-content: center;
+}
+.nav__main--white a {
+  color: #fff;
+}
+.nav__main--dark a {
+  color: #131213;
+}
+
+#hero-section {
+  height: 100vh;
+  flex-direction: column;
+  background-color: #131213;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+#hero-section h2 {
+  font-family: "Nimbus Roman no9 Regular";
+  font-weight: 300;
+  opacity: 1;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: none;
+  filter: drop-shadow(1px 1px 2px #131213);
+}
+
+.hero__bloc {
+  flex: 1 1 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transition: flex 1000ms ease-in-out, opacity 500ms linear;
+}
+
+.hero__bloc--1 {
+  background: url("./img/pexels-галина-ласаева-13516342.jpg") center;
+  background-size: cover;
+}
+
+.hero__bloc--2 {
+  background: url("./img/pexels-dario-fernandez-ruz-6440625.jpg") center;
+  background-size: cover;
+}
+
+@media (min-width: 780px) {
+  #hero-section {
+    flex-direction: row;
+  }
+
+  .hero__bloc button {
+    opacity: 0;
+  }
+
+  .hero__bloc:hover {
+    flex: 1 1 80%;
+    background-size: cover;
+  }
+  .hero__bloc:hover button {
+    opacity: 1;
+  }
+}
+/******************** BURGER ********************/
+.burger__nav {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+.burger__icon {
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+.burger__icon div {
+  gap: 2px;
+}
+.burger__icon span {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+.burger__icon--white span {
+  background-color: #FFFDF5;
+}
+.burger__icon--dark span {
+  background-color: #131213;
+}
+
+.icon__svg {
+  height: 26px;
+  stroke-width: 10;
+}
+.icon__svg--white {
+  fill: #fff;
+  stroke: #fff;
+}
+.icon__svg--dark {
+  fill: #131213;
+  stroke: #131213;
+}
+
+.burger__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background-color: #131213;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 100;
+  overflow: hidden;
+  transition: height 700ms ease-in-out;
+}
+.burger__list li {
+  opacity: 0;
+  color: #fff;
+  transition: opacity 1200ms ease-in-out;
+}
+.burger__list li a {
+  color: #fff;
+  font-weight: 300;
+}
+
+.burger__list--open {
+  height: 100vh;
+}
+.burger__list--open li {
+  opacity: 1;
+}
+
+.burger__list--close {
+  font-weight: 800;
+  cursor: pointer;
+  padding: 15px;
+}
+
+@media (min-width: 780px) {
+  .burger__list {
+    background-color: rgba(19, 18, 19, 0.9);
+  }
+}
+/************************** NAV ESHOP *******************************/
+.nav__eshop {
+  background-color: #131213;
+  position: sticky;
+  top: 0;
+  height: auto;
+  transition: all 500ms ease-in-out;
+  transform-origin: top;
+}
+.nav__eshop ul {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav__eshop li a {
+  color: #fff;
+  font-weight: 300;
+}
+
+.nav__accordeon {
+  display: flex;
+  justify-content: center;
+}
+.nav__accordeon span {
+  color: #fff;
+}
+
+.nav__accordeon--detail {
+  width: 100%;
+}
+
+@media (min-width: 780px) {
+  .nav__accordeon {
+    display: none;
+  }
+
+  .nav__eshop {
+    height: 12vh;
+  }
+  .nav__eshop ul {
+    display: flex;
+  }
+}
+/*********************************** ESHOP HOME *********************************/
+#section-slide {
+  background: url("./img/eshop_background.jpg") no-repeat 0 60%;
+  background-size: cover;
+  height: 88vh;
+}
+#section-slide h3 {
+  font-size: 4.2rem;
+}
+#section-slide h3, #section-slide p {
+  color: #fff;
+  text-shadow: 1px 1px #131213;
 }
 
 /*# sourceMappingURL=style.css.map */

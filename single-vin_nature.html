@@ -5,79 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Page vin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>La boutique</title>
 </head>
 <body>
-    <header id="header__eshop" class="flexContainer flexColumn">
-        <nav id="eshop__nav" class="flexContainer">
-            <ul class="eshop-list-nav-desktop flexContainer">
-                <li><a href="">Lol1</a></li>
-                <li><a href="">Lol2</a></li>
-            </ul>
-            <p class="textLogo">Cousin & Cie</p>
-            <ul class="eshop-list-nav-desktop flexContainer">
-                <li>
-                    <a href="">
-                    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 448 448" xml:space="preserve">
-                        <path d="M156.8,0C70.3,0,0,70.3,0,156.8s70.3,156.8,156.8,156.8c41.3,0,78.9-16,106.9-42.2c0.3,0.5,0.6,0.9,1.1,1.2l43.9,43.9 l-15.9,15.9h0c-0.1,0.1-0.2,0.2-0.3,0.3c-1.9,2.2-1.8,5.6,0.3,7.7l106,105.9c2.2,2.2,5.7,2.2,7.9,0l39.7-39.7v0 c2.2-2.2,2.2-5.7,0-7.9l-105.9-106h0c-1.1-1.1-2.5-1.7-4-1.7c-1.5,0-3,0.6-4,1.7l-15.8,15.9l-43.9-43.9l0,0 c-0.4-0.4-0.9-0.8-1.4-1.1c26.2-28,42.2-65.6,42.2-106.9C313.6,70.3,243.3,0,156.8,0L156.8,0z M156.8,11.2 c80.5,0,145.6,65.1,145.6,145.6s-65.1,145.6-145.6,145.6S11.2,237.3,11.2,156.8S76.3,11.2,156.8,11.2z M336.5,304.6l98,98 l-31.8,31.8l-98-98L336.5,304.6z"/></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.6 481.6" xml:space="preserve">
-                            <path d="M240.8,0C107.9,0,0,107.9,0,240.8s107.9,240.8,240.8,240.8s240.8-107.9,240.8-240.8S373.7,0,240.8,0L240.8,0z M240.8,11.2 c126.9,0,229.6,102.7,229.6,229.6c0,70.1-31.4,132.9-80.9,175c-24-84.9-82.2-141.4-148.7-141.4S116,330.9,92,415.8 c-49.5-42.1-80.9-104.9-80.9-175C11.2,113.9,113.9,11.2,240.8,11.2L240.8,11.2z M240.8,84c-40.1,0-72.8,32.7-72.8,72.8 s32.7,72.8,72.8,72.8s72.8-32.7,72.8-72.8S280.9,84,240.8,84z M240.8,95.2c34.1,0,61.6,27.5,61.6,61.6s-27.5,61.6-61.6,61.6 s-61.6-27.5-61.6-61.6S206.7,95.2,240.8,95.2z M240.8,285.6c61.3,0,117.1,53.6,139.3,137.9c-38.6,29.5-86.9,46.9-139.3,46.9 S140.1,453,101.5,423.5C123.7,339.2,179.5,285.6,240.8,285.6z"/></svg>
-                    </a>
-                </li>
-                <li><a href="">
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.6 369.6" xml:space="preserve">
-                            <path d="M5.1,0C2.2,0.3-0.3,3.2,0,6.1c0.3,2.9,3.2,5.4,6.1,5.1h90.7l67.3,302.2c0,0.1,0,0.2,0,0.3c-0.9,3.5-1.4,7.2-1.4,11 c0,24.7,20.1,44.8,44.8,44.8c22.8,0,41.7-17.1,44.4-39.2h101.4c2.7,22.1,21.6,39.2,44.4,39.2c24.7,0,44.8-20.1,44.8-44.8 S422.4,280,397.7,280c-22.7,0-41.6,17.2-44.4,39.2H251.9c-2.8-22-21.7-39.2-44.4-39.2c-14.4,0-27.1,6.9-35.3,17.5L157,229.6h279.9 c2.5,0,4.9-1.9,5.4-4.4l39.2-162.4c0.7-3.2-2.1-6.8-5.4-6.8H118.2L106.7,4.4c-0.5-2.4-2.9-4.4-5.4-4.4L5.1,0L5.1,0z M120.7,67.2 h348.2l-36.4,151.2h-278L120.7,67.2z M207.5,291.2c18.6,0,33.6,15,33.6,33.6s-15,33.6-33.6,33.6s-33.6-15-33.6-33.6 S188.9,291.2,207.5,291.2z M397.7,291.2c18.6,0,33.6,15,33.6,33.6s-15,33.6-33.6,33.6s-33.6-15-33.6-33.6S379.1,291.2,397.7,291.2 L397.7,291.2z"/></svg>
-                    </a>
-                </li>
-            </ul>
-            <input type="checkbox" id="hamburger-input" class="burger-shower" />
-            <label id="hamburger-menu" for="hamburger-input">
-                    <ul id="hamburger-nav">
-                        <li><a href="">À propos</a></li>
-                        <li><a href="">Les dégustations</a></li>
-                        <li><a href="">La boutique</a></li>
-                        <li><a href="">Les actualités</a></li>
-                    </ul>
-            </label>
-        </nav>
-        <nav id="eshop__nav--secondary" class="flexContainer">
-            <ul class="eshop__menu flexContainer">
-                <li class="eshop__list">
-                    <a href="">Vins naturels</a>
-                    <ul class="flexColumn eshop__submenu">
-                        <li><a href="">Par région</a></li>
-                        <li><a href="">Par couleur</a></li>
-                        <li><a href="">Par label</a></li>
-                    </ul>
-                </li>
-                <li class="eshop__list">
-                    <a href="">Vins du Monde</a>
-                    <ul class="flexColumn eshop__submenu">
-                        <li><a href="">Par pays</a></li>
-                        <li><a href="">Par couleur</a></li>
-                        <li><a href="">Par label</a></li>
-                    </ul>
-                </li>
-                <li class="eshop__list"><a href="">Trésors du bordelais</a></li>
-                <li class="eshop__list"><a href="">Box Vins & Mets</a></li>
+    <header class="header__static">
+        <nav class="burger__nav flexContainer">
+            <div class="nav__main nav__main--dark flexContainer">
+                <div><a href="">FR</a></div>
+                <div class="flexContainer"><a href="">Cousin & Cie</a></div>
+                <div class="burger__icon burger__icon--dark flexContainer">
+                    <svg class="icon__svg icon__svg--dark"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 376.3 525" xml:space="preserve">
+                        <g><path d="M113.8,82.2V17.5c4.8,0,8.8-3.9,8.8-8.8S118.6,0,113.8,0H52.5c-4.8,0-8.8,3.9-8.8,8.8s3.9,8.8,8.8,8.8v64.7 c0,23.9-8.6,47.1-24.1,65.3C10.1,168.8,0,196,0,224.1v292.2c0,2.3,0.9,4.5,2.6,6.2s3.9,2.6,6.2,2.6h148.8c2.3,0,4.5-0.9,6.2-2.6 s2.6-3.9,2.6-6.2V224.1c0-28.1-10.1-55.3-28.4-76.6C122.3,129.3,113.8,106.1,113.8,82.2L113.8,82.2z M70,87.5h26.2 c0.6,13.7,3.5,27.1,8.8,39.7l-1.8,1.9v0c-5.7,5.8-13.6,8.9-21.7,8.5c-8.1-0.3-15.7-4.1-21-10.3C66,114.8,69.2,101.3,70,87.5 L70,87.5z M96.2,17.5V70H70V17.5H96.2z M17.5,271.2h78.8v201.2H17.5V271.2z M148.8,507.5H17.5V490H105c2.3,0,4.5-0.9,6.2-2.6 s2.6-3.9,2.6-6.2V262.5c0-2.3-0.9-4.5-2.6-6.2s-3.9-2.6-6.2-2.6H17.5v-29.7c0-23.9,8.6-47.1,24.1-65.3c4-4.7,7.6-9.6,10.9-14.9 c7.6,6.5,17.1,10.4,27.1,11.1h3.3c11.4,0,22.3-4.1,30.8-11.6c3.3,5.4,7,10.6,11.1,15.4c15.5,18.2,23.9,41.4,23.9,65.3L148.8,507.5z "/> <path d="M350,507.5h-52.5v-96.8c22.2-2.1,42.8-12.6,57.5-29.4c14.7-16.8,22.3-38.7,21.3-61l-15.5-137.6c-0.5-4.5-4.3-7.8-8.8-7.8 H225.5c-4.5,0-8.3,3.3-8.8,7.8l-15.5,138.1c-0.9,22.2,6.8,43.9,21.5,60.6c14.6,16.7,35.1,27.2,57.3,29.2v96.8h-52.5 c-4.8,0-8.8,3.9-8.8,8.8s3.9,8.8,8.8,8.8H350c4.8,0,8.8-3.9,8.8-8.8S354.8,507.5,350,507.5L350,507.5z M233.3,192.5h110.9l11.7,105 H221.5L233.3,192.5z M218.7,322.3l0.9-7.3H358l0.7,6.7h0c0.6,15.1-3.8,29.9-12.4,42.2c-8.6,12.4-21,21.5-35.4,26.2 c-14.4,4.7-29.9,4.7-44.3,0c-14.3-4.6-26.6-13.7-35.3-26S218.3,337.2,218.7,322.3L218.7,322.3z"/></g>
+                    </svg>
+                    <svg class="icon__svg icon__svg--dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 390.8 437.6" xml:space="preserve">
+                        <g><path d="M195.4,204.2c27.1,0,53.1-10.8,72.2-29.9s29.9-45.1,29.9-72.2c0-27.1-10.8-53.1-29.9-72.2C248.4,10.7,222.4,0,195.3,0 c-27.1,0-53.1,10.8-72.2,30C104,49.1,93.2,75.1,93.3,102.2c0,27.1,10.8,53,30,72.1C142.4,193.4,168.3,204.2,195.4,204.2 L195.4,204.2z M195.4,17.6c22.4,0,44,8.9,59.8,24.8c15.9,15.9,24.8,37.4,24.8,59.8s-8.9,44-24.8,59.8 c-15.9,15.9-37.4,24.8-59.8,24.8s-44-8.9-59.8-24.8c-15.9-15.9-24.8-37.4-24.8-59.8c0-22.4,8.9-43.9,24.8-59.8 C151.4,26.5,173,17.6,195.4,17.6L195.4,17.6z"/> <path d="M195.4,210.1c-51.8,0.1-101.5,20.7-138.1,57.3C20.7,304,0.1,353.7,0,405.5v32.1h390.8v-32.1c0-51.8-20.6-101.5-57.3-138.1 C296.9,230.7,247.2,210.1,195.4,210.1L195.4,210.1z M373.3,420.1H17.5v-14.6c0-47.2,18.7-92.4,52.1-125.8 c33.4-33.4,78.6-52.1,125.8-52.1s92.4,18.7,125.8,52.1c33.4,33.4,52.1,78.6,52.1,125.8L373.3,420.1z"/></g>
+                    </svg>
+                    <div class="flexContainer flexColumn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="burger__list flexContainer flexColumn">
+                <li class="burger__list--close">X</li>
+                <li><a href="">La boutique en ligne</a></li>
+                <li><a href="">Les dégustations</a></li>
+                <li><a href="">à propos</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <nav class="flexContainer flexColumn nav__eshop">
+        <div class="nav__accordeon">
+            <span>+</span>
+        </div>
+        <div class="nav__accordeon--detail">
+            <ul class="flexContainer">
+                <li><a href="">Vins naturels</a></li>
+                <li><a href="">Vins du Monde</a></li>
+                <li><a href="">Trésors du bordelais</a></li>
+                <li><a href="">Box Vins & Mets</a></li>
+            </ul>
+        </div>
+    </nav>
     <section class="flexContainer flexColumn" id="product-section">
         <ul class="breadcrumb flexContainer">
             <li><a href="">Catégorie vins/</a></li>
             <li><a href="">Sous-catégorie/</a></li>
             <li><a href="">Page</a></li>
         </ul>
-        <div class="flexContainer" id="product__container">
-            <div id="product__img">
+        <div class="product__container flexContainer" id="">
+            <div class="product__img">
                 <img src="./img/vin_selection3.jpg" alt="">
             </div>
-            <div id="product__description" class="flexContainer flexColumn">
+            <div class="product__description flexContainer flexColumn">
                 <div>
                     <h1>Château de Pibarnon</h1>
                     <span class="product__year">2021</span>
@@ -95,12 +78,12 @@
                 </ul>
                 <p>Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.</p>
             </div>
-            <div id="product__action" class="flexContainer flexColumn">
+            <div class="product__action flexContainer flexColumn">
                 <ul class="product__price">
                     <li class="product__price--price">17,50 €</li>
                     <li class="product__price--type">La bouteille de 75cl</li>
                 </ul>
-                <div id="product__submit">
+                <div class="product__submit">
                     <input type="number" id="product__quantity" value="1" min="1" max="24">
                     <input type="submit" class="btn btn__color--black" value="Ajouter au panier">
                 </div>
@@ -112,102 +95,121 @@
         </div>
     </section>
     <section class="flexContainer flexColumn section-dark" id="section-accords">
-        <div class="flexContainer title centerItems">
+        <div class="flexContainer centerItems title__accordeon">
             <h3>Dégustation & accords</h3>
+            <img class="testImg" src="./img/fleche_bas.svg" alt="">
         </div>
-        <div class="flexContainer detail__container">
-            <div>
-                <h4>L'avis du sommelier</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, commodi.</p>
+        <div class="flexContainer flexColumn detail__container--accordeon">
+            <ul class="flexContainer detail__list">
+                <li>
+                    <h4>L'avis du sommelier</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, commodi.</p>
+                 </li>
+                <li>
+                    <h4>Goût</h4>
+                    <p>Floral, fruité</p>
+                </li>
+                <li>
+                    <h4>T° de service</h4>
+                    <p>17°C</p>
+                </li>
+                <li>
+                    <figure class="flexContainer">
+                        <img src="./img/icon-star.svg" alt="">
+                        <div>
+                            <figcaption>Accord Parfait</figcaption>
+                            <p>Moussaka</p>
+                        </div>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="flexContainer detail__list">
+                <li>
+                    <figure class="flexContainer">
+                        <img src="./img/icon-sandwich.svg" alt="">
+                        <div>
+                            <figcaption>Apéritif</figcaption>
+                             <p>Petits fours</p>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="flexContainer">
+                        <img src="./img/icon-viande.svg" alt="">
+                        <div>
+                            <figcaption>Viandes</figcaption>
+                            <p>Grillades</p>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="flexContainer">
+                        <img src="./img/icon-gateau.svg" alt="">
+                        <div>
+                            <figcaption>Gâteaux</figcaption>
+                            <p>Tartes aux fruits</p>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="flexContainer">
+                        <img src="./img/icon-carotte.svg" alt="">
+                            <div>
+                                <figcaption>Légumes</figcaption>
+                                <p>Légumes d'été grillés</p>
+                            </div>
+                        </figure>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <h4>Goût</h4>
-                <p>Floral, fruité</p>
-            </div>
-            <div>
-                <h4>T° de service</h4>
-                <p>17°C</p>
-            </div>
-            <figure class="flexContainer">
-                <img src="./img/icon-star.svg" alt="">
-                <div>
-                    <figcaption>Accord Parfait</figcaption>
-                    <p>Moussaka</p>
-                </div>
-            </figure>
-        </div>
-        <div class="flexContainer detail__container">
-            <figure class="flexContainer">
-                <img src="./img/icon-sandwich.svg" alt="">
-                <div>
-                    <figcaption>Apéritif</figcaption>
-                    <p>Petits fours</p>
-                </div>
-            </figure>
-            <figure class="flexContainer">
-                <img src="./img/icon-viande.svg" alt="">
-                <div>
-                    <figcaption>Viandes</figcaption>
-                    <p>Grillades</p>
-                </div>
-            </figure>
-            <figure class="flexContainer">
-                <img src="./img/icon-gateau.svg" alt="">
-                <div>
-                    <figcaption>Gâteaux</figcaption>
-                    <p>Tartes aux fruits</p>
-                </div>
-            </figure>
-            <figure class="flexContainer">
-                <img src="./img/icon-carotte.svg" alt="">
-                <div>
-                    <figcaption>Légumes</figcaption>
-                    <p>Légumes d'été grillés</p>
-                </div>
-            </figure>
-        </div>
     </section>
     <section class="flexContainer flexColumn" id="section-caracteristiques">
-        <div class="flexContainer title centerItems">
+        <div class="flexContainer centerItems title__accordeon">
             <h3>Caractéristiques</h3>
+            <img src="./img/fleche_bas.svg" alt="">
         </div>
-        <div class="flexContainer detail__container">
-            <div>
-                <h4>Couleur</h4>
-                <p>Rosé</p>
-            </div>
-            <div>
-                <h4>Millésime</h4>
-                <p>2021</p>
-            </div>
-            <div>
-                <h4>Région</h4>
-                <p>Provence</p>
-            </div>
-            <div>
-                <h4>Cépages</h4>
-                <ul><li>Syrah</li><li>pinot blanc</li></ul>
-            </div>
-            <div>
-                <h4>Culture</h4>
-                <ul><li>Agriculture biologique</li><li>Nature & progrès</li></ul>
-            </div>
-            <div>
-                <h4>Appellation</h4>
-                <p>AOC Bandol</p>
-            </div>
+        <div class="flexContainer detail__container detail__container--accordeon">
+            <ul class="flexContainer detail__list">
+                <li>
+                    <h4>Couleur</h4>
+                    <p>Rosé</p>
+                </li>
+                <li>
+                    <h4>Millésime</h4>
+                    <p>2021</p>
+                </li>
+                <li>
+                    <h4>Région</h4>
+                    <p>Provence</p>
+                </li>
+                <li>
+                    <h4>Cépages</h4>
+                    <ul><li>Syrah</li><li>pinot blanc</li></ul>
+                </li>
+                <li>
+                    <h4>Culture</h4>
+                    <ul><li>Agriculture biologique</li><li>Nature & progrès</li></ul>
+                </li>
+                <li>
+                    <h4>Appellation</h4>
+                    <p>AOC Bandol</p>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="flexContainer" id="section-domaine">
-        <div id="domaine__img">
+        <div class="domaine__detail">
             <img src="./img/img_domaine.jpg" alt="">
         </div>
-        <div class="flexContainer title" id="domaine__detail">
+        <div class="domaine__detail flexContainer title">
             <h3>Le domaine</h3>
             <h4>Château de Pibarnon</h4>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero excepturi illum mollitia tempora magnam est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat qui optio, minus architecto placeat rem.</p>
             <button class="btn btn__scale btn__color--black"><a href="">Voir tous les vins</a></button>
         </div>
     </section>
+    <script src="hamburger.js"></script>
+    <script src="burger.js"></script>
+    <script src="nav_height.js"></script>
 </body>
 </html>
