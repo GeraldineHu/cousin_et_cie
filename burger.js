@@ -3,15 +3,18 @@ let burgerIcon = $('.burger__icon > div > span');
 let burgerClose = $('.burger__list--close');
 let burgerMenu = $('.burger__list');
 let navEshop = $('.nav__eshop');
-let i;
 
 burger.on('click', function(e) {
     burgerMenu.addClass('burger__list--open');
+    //Passer la nav en arrière plan
     navEshop.css('z-index', '0');
+    //Empêcher le scroll Y
     $('body').css('overflow', 'hidden');
     burgerClose.on('click', function(e) {
         burgerMenu.removeClass('burger__list--open');
+        //Rétablir le scroll Y
         $('body').css('overflow', 'auto');
+        //Remonter la nav en 1er plan
         navEshop.css('z-index', '100');
     });
 });

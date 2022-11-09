@@ -9,19 +9,25 @@
     <title>Les actualités</title>
 </head>
 <body>
-    <header class="flexContainer flexColumn">
-        <nav class="nav__secondary--dark flexContainer">
-            <div class="hamburger hamburger--spring">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
+    <header class="header__static">
+        <nav class="burger__nav flexContainer">
+            <div class="nav__main nav__main--dark flexContainer">
+                <div><a href="">FR</a></div>
+                <div class="flexContainer"><a href="">Cousin & Cie</a></div>
+                <div class="burger__icon burger__icon--dark flexContainer">
+                    <div class="flexContainer flexColumn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-              </div>
-              <ul class="nav_mobile">
-                <li><a href="">item01</a></li>
-                <li><a href="">item02</a></li>
-                <li><a href="">item03</a></li>
-                <li><a href="">item04</a></li>
-                <li><a href="">item05</a></li>
+            </div>
+            <ul class="burger__list flexContainer flexColumn">
+                <li class="burger__list--close">X</li>
+                <li><a href="">La boutique en ligne</a></li>
+                <li><a href="">Les dégustations</a></li>
+                <li><a href="">à propos</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +35,10 @@
         <figure class="figure__actu">
             <img src="./img/img_blog01.jpg" alt="">
             <div class="flexContainer flexColumn figOverlay">
-                <figcaption>Article 2</figcaption>
-                <p>Lire plus</p>
+                <figcaption>
+                    <h4>Top 10 des plus belles destinations œnotouristiques</h4>
+                    <p>Lire plus</p>
+                </figcaption>
             </div>
         </figure>
     </section>
@@ -43,15 +51,19 @@
             <figure class="figure__actu">
                 <img src="./img/vignette_box03.jpg" alt="">
                 <div class="flexContainer flexColumn figOverlay">
-                    <figcaption>Article 2</figcaption>
-                    <p>Lire plus</p>
+                    <figcaption>
+                        <h4>Article 3</h4>
+                        <p>Lire plus</p>
+                    </figcaption>
                 </div>
             </figure>
             <figure class="figure__actu">
                 <img src="./img/img_blog02.jpg" alt="">
                 <div class="flexContainer flexColumn figOverlay">
-                    <figcaption>Article 2</figcaption>
-                    <p>Lire plus</p>
+                    <figcaption>
+                        <h4>Article 4</h4>
+                        <p>Lire plus</p>
+                    </figcaption>
                 </div>
             </figure>
         </div>
@@ -65,23 +77,29 @@
             <figure class="figure__actu">
                 <img src="./img/img_blog02.jpg" alt="">
                 <div class="flexContainer flexColumn figOverlay">
-                    <figcaption>Article 2</figcaption>
+                    <figcaption>
+                        <p>Publication Insta</p>
+                    </figcaption>
                 </div>
             </figure>
             <figure class="figure__actu">
                 <img src="./img/img_blog02.jpg" alt="">
                 <div class="flexContainer flexColumn figOverlay">
-                    <figcaption>Article 2</figcaption>
+                    <figcaption>
+                        <p>Publication Insta</p>
+                    </figcaption>
                 </div>
             </figure>
             <figure class="figure__actu">
                 <img src="./img/img_blog02.jpg" alt="">
                 <div class="flexContainer flexColumn figOverlay">
-                    <figcaption>Article 2</figcaption>
+                    <figcaption>
+                        <p>Publication Insta</p>
+                    </figcaption>
                 </div>
             </figure>
         </div>
     </section>
-    <script src="hamburger.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

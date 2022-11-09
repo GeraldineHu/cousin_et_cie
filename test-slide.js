@@ -31,10 +31,6 @@ function slideFade() {
   $('.slide__eshop--2').fadeToggle(1000);
   $('.slide__icon > span').toggleClass('slide__icon--active');
 };
-//Stop interval au hover du bouton
-slideBtn.on('mouseover', function() {
-  clearInterval(slideEshopDelay);
-});
 //Au clic sur un des ronds, changement de classes, changement de fade, stop interval
 $('.slide__icon--1').on('click', function() {
   clearInterval(slideEshopDelay);
@@ -49,3 +45,8 @@ $('.slide__icon--2').on('click', function() {
   $(this).addClass('slide__icon--active');
   $('.slide__eshop--2').fadeOut(1000);
 })
+
+/*Stop interval au hover du bouton
+slideBtn.on('mouseover', function() {
+  clearInterval(slideEshopDelay);
+});*/

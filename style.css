@@ -476,22 +476,25 @@ nav a {
   left: 0;
   transition: all 600ms ease;
 }
-.figOverlay p, .figOverlay figcaption {
+.figOverlay figcaption > h4, .figOverlay p {
   color: #fff;
   transition: all 800ms ease;
 }
-.figOverlay p {
-  display: flex;
-}
-.figOverlay figcaption {
+.figOverlay figcaption > h4 {
   font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
   font-size: 2.4rem;
+  text-transform: none;
+}
+.figOverlay figcaption > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
 }
 .figOverlay:hover {
   background-color: rgba(19, 18, 19, 0.5);
 }
-.figOverlay:hover figcaption {
+.figOverlay:hover figcaption > h4 {
   transform: translate(30px, -10px) scale(1.2);
 }
 .figOverlay:hover p {
@@ -782,6 +785,7 @@ footer li ul {
 }
 /************* PAGE PRODUIT SECTION PRODUCT *************/
 .breadcrumb {
+  width: 100%;
   gap: 10px;
 }
 .breadcrumb li {
@@ -799,7 +803,7 @@ footer li ul {
 .product__container h1, .product__container .product__year, .product__container .product__price--price {
   font-family: "Nimbus Roman no9 Regular";
   font-weight: 300;
-  font-size: 4.8rem;
+  font-size: 4.2rem;
   letter-spacing: 0;
   line-height: 1;
 }
@@ -834,6 +838,7 @@ footer li ul {
 
 .product__label {
   gap: 15px;
+  flex-direction: column;
 }
 .product__label li {
   background-color: #131213;
@@ -881,6 +886,13 @@ footer li ul {
   .product__container {
     flex-direction: row;
   }
+  .product__container h1, .product__container .product__year, .product__container .product__price--price {
+    font-size: 4.8rem;
+  }
+
+  .product__label {
+    flex-direction: row;
+  }
 }
 /************* PAGE PRODUIT SECTION DEGUSTATION *************/
 #section-accords {
@@ -910,6 +922,7 @@ footer li ul {
   gap: 20px;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 }
 
 @media (min-width: 780px) {
@@ -1025,6 +1038,13 @@ input[type=checkbox] {
   }
 }
 /********************** PAGE ACTUALITES *******************/
+#hero-actu {
+  padding: 0 0 5%;
+}
+#hero-actu > .figure__actu {
+  width: 100%;
+}
+
 @media (min-width: 780px) {
   #hero-actu {
     height: 88vh;

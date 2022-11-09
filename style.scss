@@ -543,21 +543,23 @@ nav {
     top: 0;
     left: 0;
     transition: all 600ms ease;
-    p, figcaption {
+    & figcaption > h4, p {
         color: #fff;
         transition: all 800ms ease;
     }
-    p {
-        display: flex;
-    }
-    figcaption {
+    & figcaption > h4 {
         @include nimbusLight;
         font-size: 2.4rem;
+        text-transform: none;
+    }
+    & figcaption > p {
+        @include montserratLight;
+        font-size: 1.8rem;        
     }
     &:hover{
         background-color: rgba(19,18,19,0.5);
     }
-    &:hover figcaption{
+    &:hover figcaption > h4{
         transform: translate(30px, -10px) scale(1.2);
     }
     &:hover p{
@@ -877,6 +879,7 @@ footer li ul {
 
 
 .breadcrumb {
+    width: 100%;
     gap: 10px;
     li {
         font-size: 1.4rem;
@@ -892,7 +895,7 @@ footer li ul {
     height: 85%;
     h1, .product__year, .product__price--price  {
         @include nimbusLight;
-        font-size: 4.8rem;
+        font-size: 4.2rem;
         letter-spacing: 0;
         line-height: 1;
     }
@@ -928,6 +931,7 @@ footer li ul {
 
 .product__label {
     gap: 15px;
+    flex-direction: column;
     li {
         background-color: $dark-color;
         color: #fff;
@@ -974,6 +978,12 @@ footer li ul {
     }
     .product__container {
         flex-direction: row;
+        h1, .product__year, .product__price--price  {
+            font-size: 4.8rem;
+        }
+    }
+    .product__label {
+        flex-direction: row;
     }
 }
 
@@ -1008,6 +1018,7 @@ footer li ul {
     gap: 20px;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
 }
 
 @media (min-width: 780px) {
@@ -1134,6 +1145,13 @@ input[type="checkbox"] {
 
 
 /********************** PAGE ACTUALITES *******************/
+
+#hero-actu {
+    padding: 0 0 5%;
+    & > .figure__actu {
+        width: 100%;
+    }
+}
 
 @media (min-width: 780px) {
     #hero-actu {
