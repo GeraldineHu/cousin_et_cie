@@ -29,6 +29,7 @@ body {
   font-size: 1.6rem;
   margin: 0;
   background-color: #FFFDF5;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -1209,6 +1210,7 @@ input[type=checkbox] {
 
 .hero__bloc {
   flex: 1 1 50%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -1370,9 +1372,9 @@ input[type=checkbox] {
 }
 /*********************************** ESHOP HOME *********************************/
 #section-slide {
-  background: url("./img/eshop_background.jpg") no-repeat 0 60%;
-  background-size: cover;
+  padding: 0;
   height: 88vh;
+  justify-content: flex-start;
 }
 #section-slide h3 {
   font-size: 4.2rem;
@@ -1380,6 +1382,52 @@ input[type=checkbox] {
 #section-slide h3, #section-slide p {
   color: #fff;
   text-shadow: 1px 1px #131213;
+}
+
+.slide__container {
+  height: 100%;
+  width: 100%;
+  transition: all 1500ms ease-in;
+  position: relative;
+}
+
+.slide__container--translate {
+  transform: translateX(-100vw);
+}
+
+.slide__eshop {
+  width: 100vw;
+}
+
+.slide__eshop--1 {
+  background: url("./img/eshop_background.jpg") no-repeat 0 60%;
+  background-size: cover;
+}
+
+.slide__eshop--2 {
+  background: url("./img/slideeshop2.jpg") no-repeat 0 top;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.slide__icon {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  gap: 10px;
+}
+.slide__icon span {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: all 500ms ease-in-out;
+}
+.slide__icon .slide__icon--active {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

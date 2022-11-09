@@ -22,3 +22,6 @@ $('.nav__accordeon').on('click', function(e) {
     $('.nav__accordeon').next().slideToggle(1000);
     $(this).next().toggleClass('flexContainer')
 });
+
+
+
