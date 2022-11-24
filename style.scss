@@ -163,7 +163,7 @@ section {
 
 .section-dark {
     background-color: $dark-color;
-    h3, p {
+    h3, p, li {
         color: #fff;
     }
 }
@@ -1004,7 +1004,7 @@ footer li ul {
         text-transform: uppercase;
         font-weight: 400;
     }
-    p {
+    p, li {
         font-weight: 300;
     }
 }
@@ -1034,11 +1034,10 @@ footer li ul {
 
 #section-domaine {
     flex-direction: column;
-}
-
-.domaine__detail {
-    flex: 1;
-    justify-content: center;
+    & > div {
+        flex: 1;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 780px) {
@@ -1296,6 +1295,7 @@ input[type="checkbox"] {
     }
     .detail__container--accordeon {
         display: flex;
+        width: 100%;
     }
 }
 
@@ -1438,7 +1438,7 @@ input[type="checkbox"] {
     left: 0;
     height: 0;
     width: 100%;
-    background-color: rgba(19, 18, 19, 1);
+    background-color: $dark-color;
     justify-content: space-evenly;
     align-items: center;
     z-index: 100;
@@ -1470,7 +1470,7 @@ input[type="checkbox"] {
 
 @media (min-width: 780px) {
     .burger__list {
-        background-color: rgba(19, 18, 19, 0.9);
+        background-color: $dark-color;
     }
 }
 
@@ -1505,6 +1505,10 @@ input[type="checkbox"] {
 
 .nav__accordeon--detail {
     width: 100%;
+}
+
+.nav__eshop--min {
+    height: 7vh;
 }
 
 @media (min-width: 780px) {
@@ -1546,6 +1550,9 @@ input[type="checkbox"] {
 
 .slide__eshop {
     width: 100vw;
+    & > h3, p {
+        text-align: center;
+    }
 }
 
 .slide__eshop--1 {
@@ -1560,6 +1567,7 @@ input[type="checkbox"] {
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
 }
 
 .slide__icon {
@@ -1576,5 +1584,32 @@ input[type="checkbox"] {
     }
     .slide__icon--active {
         background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+
+/************************ PAGE DEGUSTATIONS ******************************/
+
+#hero-degustation {
+    height: 100vh;
+    background: url('./img/croisiere_degustation.jpg') no-repeat center;
+    background-size: cover;
+    h3, p {
+        color: #fff;
+        text-shadow: 1px 1px $dark-color;
+    }
+}
+
+#section-reservation {
+    flex-direction: column;
+    & > div {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 780px) {
+    #section-reservation {
+        flex-direction: row;
     }
 }

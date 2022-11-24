@@ -8,7 +8,7 @@ console.log(navPosition);
 if ($(window).width() > 780) {
     $(window).on('scroll', function() {
         scrollTop = $(this).scrollTop();
-        if( scrollTop >= navPosition) {
+        if( scrollTop >= (sectionHeight + navHeight)) {
             navEshop.css('height', '7vh');
         }
         else {

@@ -28,3 +28,18 @@ $('.nav__accordeon').on('click', function(e) {
 
 
 
+/***************** ACCORDEON DETAILS VIN ****************/
+
+if ($(window).width() < 780) {
+    $(".title__accordeon").on("click", function(e) {
+        // Do something else, like open/close menu
+        $(".title__accordeon").next().slideUp(1000);
+        $(".title__accordeon").children('img').removeClass("open__accordeon");
+        if ( $(this).next().is(':hidden') ) {
+          $(this).next().slideDown(1000);
+          $(this).next().toggleClass("flexContainer");
+          //$(this).children('img').css("scale", "-1");
+          $(this).children('img').toggleClass("open__accordeon");
+        }
+    });
+  }
